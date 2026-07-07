@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+
 
 import logoAsset from "@/assets/vinterior-logo.asset.json";
 import heroImg from "@/assets/hero-antique-interior.jpg";
@@ -10,9 +11,31 @@ import productTable from "@/assets/product-table.asset.json";
 import productChair from "@/assets/product-chair.asset.json";
 
 const pageTitle =
-  "Vinterior — Luxury Antique Furniture & Heritage Décor in Mumbai";
+  "Vinterior — Antique Furniture Gallery in Mumbai | Chor Bazaar Heritage Décor";
 const pageDescription =
-  "Discover museum-worthy antique furniture, vintage collectibles and heritage décor sourced from across the world. A private Mumbai gallery for discerning collectors.";
+  "Vinterior is a private antique furniture gallery on Mutton Street, Chor Bazaar, Mumbai. Authenticated 18th & 19th-century European, Anglo-Indian, colonial and vintage furniture, chandeliers, mirrors, cabinets and heritage décor — restored in-house for collectors, interior designers and heritage homes across India.";
+const pageKeywords = [
+  "Vinterior",
+  "Vinterior Mumbai",
+  "Vinterior Chor Bazaar",
+  "Vinterior Furniture",
+  "antique furniture Mumbai",
+  "antique shop Mumbai",
+  "antique dealers Mumbai",
+  "Chor Bazaar antiques",
+  "Mutton Street Mumbai",
+  "vintage furniture India",
+  "colonial furniture Mumbai",
+  "Anglo-Indian furniture",
+  "Burmese teak furniture",
+  "antique cabinets India",
+  "antique chandeliers Mumbai",
+  "antique mirrors India",
+  "heritage décor Mumbai",
+  "restored antique furniture",
+  "luxury antique gallery India",
+  "buy antique furniture online India",
+].join(", ");
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -20,12 +43,61 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: pageTitle },
       { name: "description", content: pageDescription },
+      { name: "keywords", content: pageKeywords },
       { property: "og:title", content: pageTitle },
       { property: "og:description", content: pageDescription },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:locale", content: "en_IN" },
+      { name: "geo.region", content: "IN-MH" },
+      { name: "geo.placename", content: "Mumbai" },
+      { name: "geo.position", content: "18.9615;72.8352" },
+      { name: "ICBM", content: "18.9615, 72.8352" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Where is Vinterior located in Mumbai?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Vinterior is located at G-74 / G-75 / G-76, An Nasr (Sector 4), Mutton Street, Chor Bazaar, Mumbai — 400003. Chor Bazaar is India's oldest antique district and Vinterior is one of its longest-standing curated galleries.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What kind of antiques does Vinterior sell?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Vinterior curates authenticated 18th and 19th-century European, Anglo-Indian, Burmese and colonial furniture, along with vintage chandeliers, gilt mirrors, marquetry cabinets, carved seating and heritage decorative objects. Every piece is one-of-one.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Are Vinterior's antiques authenticated and restored?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Every piece admitted into the gallery is examined, dated and documented, then restored by hand in our in-house Mumbai atelier — preserving patina and honouring age rather than refinishing over it.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Does Vinterior ship antique furniture across India and internationally?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Vinterior arranges crated, insured shipping for antique furniture across India and worldwide, working with specialist fine-art logistics partners. Enquire via WhatsApp for a quote.",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
 });
 
@@ -83,10 +155,102 @@ function Home() {
       <Pillars />
       <Showroom />
       <Testimonials />
+      <SeoContext />
+      <JournalPreview />
       <Footer />
     </div>
   );
 }
+
+function SeoContext() {
+  return (
+    <section className="bg-warm-white py-24 md:py-32" aria-labelledby="about-vinterior">
+      <div className="mx-auto max-w-4xl px-6 md:px-12">
+        <p className="eyebrow"><span className="hairline mr-3" />About Vinterior</p>
+        <h2 id="about-vinterior" className="mt-6 font-serif text-3xl leading-[1.15] text-charcoal md:text-4xl">
+          Mumbai's quiet address for <em className="italic font-normal">authenticated antique furniture.</em>
+        </h2>
+        <div className="mt-8 space-y-5 text-[15px] font-light leading-[1.85] text-muted-foreground md:text-base">
+          <p>
+            Vinterior is a private antique furniture gallery on Mutton Street in Chor Bazaar, Mumbai —
+            India's oldest and most storied antique district. For over two decades our family has
+            dealt in <strong className="font-medium text-charcoal">18th and 19th-century European antiques</strong>,
+            <strong className="font-medium text-charcoal"> Anglo-Indian and colonial furniture</strong>,
+            Burmese teak and rosewood, gilt mirrors, crystal chandeliers, marquetry cabinets, writing bureaus,
+            campaign chests and one-of-a-kind heritage décor.
+          </p>
+          <p>
+            Collectors, interior designers and heritage-home owners across Mumbai, Delhi, Bangalore, Goa,
+            Hyderabad and internationally come to Vinterior for pieces that cannot be reproduced —
+            each one authenticated, dated and restored by hand in our in-house atelier. We do not
+            reproduce, we do not refinish over patina, and we do not stock what has already been
+            catalogued a thousand times. If a piece enters the gallery, it has earned its place.
+          </p>
+          <p>
+            Whether you are searching for a French Louis XV vitrine, an Anglo-Indian carved centre table,
+            a Burmese rosewood chair, a Belgian cut-crystal chandelier or a colonial Bombay writing
+            desk — you will find fewer, better things here than in any online catalogue.
+            Visit our Chor Bazaar showroom by appointment, or enquire on WhatsApp.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function JournalPreview() {
+  const posts = [
+    {
+      slug: "chor-bazaar-antique-guide-mumbai",
+      title: "A Collector's Guide to Chor Bazaar",
+      excerpt: "How to walk Mutton Street like a dealer — what to look for, what to avoid, and why Mumbai's oldest antique district still matters.",
+    },
+    {
+      slug: "how-to-authenticate-antique-furniture",
+      title: "How to Authenticate an Antique",
+      excerpt: "Patina, joinery, timber, hardware and provenance — the five things every buyer should examine before parting with money.",
+    },
+    {
+      slug: "anglo-indian-furniture-history",
+      title: "The Quiet Grandeur of Anglo-Indian Furniture",
+      excerpt: "A short history of the furniture born from the meeting of European form and Indian craft — Bombay, Madras, and beyond.",
+    },
+  ];
+  return (
+    <section className="bg-ivory py-28 md:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <SectionHeader
+            eyebrow="The Journal"
+            title={<>Notes from the <em className="italic font-normal">gallery.</em></>}
+            intro="Occasional writing on antique furniture, restoration, provenance and the collectors who care."
+          />
+          <Link to="/journal" className="btn-ghost self-start md:self-end">All Writing</Link>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-3">
+          {posts.map((p) => (
+            <Link
+              key={p.slug}
+              to="/journal/$slug"
+              params={{ slug: p.slug }}
+              className="group block border-t border-charcoal/15 pt-8"
+            >
+              <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-bronze">Essay</p>
+              <h3 className="mt-4 font-serif text-2xl leading-snug text-charcoal group-hover:text-bronze">
+                {p.title}
+              </h3>
+              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">{p.excerpt}</p>
+              <span className="mt-6 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/70 border-b border-charcoal/30 pb-1 group-hover:border-charcoal">
+                Read →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -122,6 +286,7 @@ function Nav() {
         <nav className="hidden items-center gap-10 text-xs font-medium uppercase tracking-[0.22em] text-charcoal/80 lg:flex">
           <a href="#arrivals" className="hover:text-charcoal">Pieces</a>
           <a href="#story" className="hover:text-charcoal">Our Story</a>
+          <Link to="/journal" className="hover:text-charcoal">Journal</Link>
           <a href="#showroom" className="hover:text-charcoal">Showroom</a>
         </nav>
 
@@ -491,6 +656,7 @@ function Footer() {
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
               <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
               <li><a href="#story" className="hover:text-gold">Our Story</a></li>
+              <li><Link to="/journal" className="hover:text-gold">Journal</Link></li>
               <li><a href="#showroom" className="hover:text-gold">Showroom</a></li>
             </ul>
           </div>
