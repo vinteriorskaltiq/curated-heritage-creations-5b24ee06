@@ -5,16 +5,9 @@ import logoAsset from "@/assets/vinterior-logo.asset.json";
 import heroImg from "@/assets/hero-antique-interior.jpg";
 import showroomImg from "@/assets/showroom.jpg";
 import storyImg from "@/assets/story-craft.jpg";
-import pieceArmchair from "@/assets/piece-armchair.jpg";
-import pieceChandelier from "@/assets/piece-chandelier.jpg";
-import pieceMirror from "@/assets/piece-mirror.jpg";
-import pieceCabinet from "@/assets/piece-cabinet.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import productVitrine from "@/assets/product-vitrine.asset.json";
+import productTable from "@/assets/product-table.asset.json";
+import productChair from "@/assets/product-chair.asset.json";
 
 const pageTitle =
   "Vinterior — Luxury Antique Furniture & Heritage Décor in Mumbai";
