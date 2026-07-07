@@ -155,10 +155,102 @@ function Home() {
       <Pillars />
       <Showroom />
       <Testimonials />
+      <SeoContext />
+      <JournalPreview />
       <Footer />
     </div>
   );
 }
+
+function SeoContext() {
+  return (
+    <section className="bg-warm-white py-24 md:py-32" aria-labelledby="about-vinterior">
+      <div className="mx-auto max-w-4xl px-6 md:px-12">
+        <p className="eyebrow"><span className="hairline mr-3" />About Vinterior</p>
+        <h2 id="about-vinterior" className="mt-6 font-serif text-3xl leading-[1.15] text-charcoal md:text-4xl">
+          Mumbai's quiet address for <em className="italic font-normal">authenticated antique furniture.</em>
+        </h2>
+        <div className="mt-8 space-y-5 text-[15px] font-light leading-[1.85] text-muted-foreground md:text-base">
+          <p>
+            Vinterior is a private antique furniture gallery on Mutton Street in Chor Bazaar, Mumbai —
+            India's oldest and most storied antique district. For over two decades our family has
+            dealt in <strong className="font-medium text-charcoal">18th and 19th-century European antiques</strong>,
+            <strong className="font-medium text-charcoal"> Anglo-Indian and colonial furniture</strong>,
+            Burmese teak and rosewood, gilt mirrors, crystal chandeliers, marquetry cabinets, writing bureaus,
+            campaign chests and one-of-a-kind heritage décor.
+          </p>
+          <p>
+            Collectors, interior designers and heritage-home owners across Mumbai, Delhi, Bangalore, Goa,
+            Hyderabad and internationally come to Vinterior for pieces that cannot be reproduced —
+            each one authenticated, dated and restored by hand in our in-house atelier. We do not
+            reproduce, we do not refinish over patina, and we do not stock what has already been
+            catalogued a thousand times. If a piece enters the gallery, it has earned its place.
+          </p>
+          <p>
+            Whether you are searching for a French Louis XV vitrine, an Anglo-Indian carved centre table,
+            a Burmese rosewood chair, a Belgian cut-crystal chandelier or a colonial Bombay writing
+            desk — you will find fewer, better things here than in any online catalogue.
+            Visit our Chor Bazaar showroom by appointment, or enquire on WhatsApp.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function JournalPreview() {
+  const posts = [
+    {
+      slug: "chor-bazaar-antique-guide-mumbai",
+      title: "A Collector's Guide to Chor Bazaar",
+      excerpt: "How to walk Mutton Street like a dealer — what to look for, what to avoid, and why Mumbai's oldest antique district still matters.",
+    },
+    {
+      slug: "how-to-authenticate-antique-furniture",
+      title: "How to Authenticate an Antique",
+      excerpt: "Patina, joinery, timber, hardware and provenance — the five things every buyer should examine before parting with money.",
+    },
+    {
+      slug: "anglo-indian-furniture-history",
+      title: "The Quiet Grandeur of Anglo-Indian Furniture",
+      excerpt: "A short history of the furniture born from the meeting of European form and Indian craft — Bombay, Madras, and beyond.",
+    },
+  ];
+  return (
+    <section className="bg-ivory py-28 md:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <SectionHeader
+            eyebrow="The Journal"
+            title={<>Notes from the <em className="italic font-normal">gallery.</em></>}
+            intro="Occasional writing on antique furniture, restoration, provenance and the collectors who care."
+          />
+          <Link to="/journal" className="btn-ghost self-start md:self-end">All Writing</Link>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-3">
+          {posts.map((p) => (
+            <Link
+              key={p.slug}
+              to="/journal/$slug"
+              params={{ slug: p.slug }}
+              className="group block border-t border-charcoal/15 pt-8"
+            >
+              <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-bronze">Essay</p>
+              <h3 className="mt-4 font-serif text-2xl leading-snug text-charcoal group-hover:text-bronze">
+                {p.title}
+              </h3>
+              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">{p.excerpt}</p>
+              <span className="mt-6 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/70 border-b border-charcoal/30 pb-1 group-hover:border-charcoal">
+                Read →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
