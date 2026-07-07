@@ -10,9 +10,31 @@ import productTable from "@/assets/product-table.asset.json";
 import productChair from "@/assets/product-chair.asset.json";
 
 const pageTitle =
-  "Vinterior — Luxury Antique Furniture & Heritage Décor in Mumbai";
+  "Vinterior — Antique Furniture Gallery in Mumbai | Chor Bazaar Heritage Décor";
 const pageDescription =
-  "Discover museum-worthy antique furniture, vintage collectibles and heritage décor sourced from across the world. A private Mumbai gallery for discerning collectors.";
+  "Vinterior is a private antique furniture gallery on Mutton Street, Chor Bazaar, Mumbai. Authenticated 18th & 19th-century European, Anglo-Indian, colonial and vintage furniture, chandeliers, mirrors, cabinets and heritage décor — restored in-house for collectors, interior designers and heritage homes across India.";
+const pageKeywords = [
+  "Vinterior",
+  "Vinterior Mumbai",
+  "Vinterior Chor Bazaar",
+  "Vinterior Furniture",
+  "antique furniture Mumbai",
+  "antique shop Mumbai",
+  "antique dealers Mumbai",
+  "Chor Bazaar antiques",
+  "Mutton Street Mumbai",
+  "vintage furniture India",
+  "colonial furniture Mumbai",
+  "Anglo-Indian furniture",
+  "Burmese teak furniture",
+  "antique cabinets India",
+  "antique chandeliers Mumbai",
+  "antique mirrors India",
+  "heritage décor Mumbai",
+  "restored antique furniture",
+  "luxury antique gallery India",
+  "buy antique furniture online India",
+].join(", ");
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -20,12 +42,61 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: pageTitle },
       { name: "description", content: pageDescription },
+      { name: "keywords", content: pageKeywords },
       { property: "og:title", content: pageTitle },
       { property: "og:description", content: pageDescription },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:locale", content: "en_IN" },
+      { name: "geo.region", content: "IN-MH" },
+      { name: "geo.placename", content: "Mumbai" },
+      { name: "geo.position", content: "18.9615;72.8352" },
+      { name: "ICBM", content: "18.9615, 72.8352" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Where is Vinterior located in Mumbai?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Vinterior is located at G-74 / G-75 / G-76, An Nasr (Sector 4), Mutton Street, Chor Bazaar, Mumbai — 400003. Chor Bazaar is India's oldest antique district and Vinterior is one of its longest-standing curated galleries.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What kind of antiques does Vinterior sell?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Vinterior curates authenticated 18th and 19th-century European, Anglo-Indian, Burmese and colonial furniture, along with vintage chandeliers, gilt mirrors, marquetry cabinets, carved seating and heritage decorative objects. Every piece is one-of-one.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Are Vinterior's antiques authenticated and restored?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Every piece admitted into the gallery is examined, dated and documented, then restored by hand in our in-house Mumbai atelier — preserving patina and honouring age rather than refinishing over it.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Does Vinterior ship antique furniture across India and internationally?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Vinterior arranges crated, insured shipping for antique furniture across India and worldwide, working with specialist fine-art logistics partners. Enquire via WhatsApp for a quote.",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
 });
 
