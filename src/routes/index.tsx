@@ -5,16 +5,9 @@ import logoAsset from "@/assets/vinterior-logo.asset.json";
 import heroImg from "@/assets/hero-antique-interior.jpg";
 import showroomImg from "@/assets/showroom.jpg";
 import storyImg from "@/assets/story-craft.jpg";
-import pieceArmchair from "@/assets/piece-armchair.jpg";
-import pieceChandelier from "@/assets/piece-chandelier.jpg";
-import pieceMirror from "@/assets/piece-mirror.jpg";
-import pieceCabinet from "@/assets/piece-cabinet.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import productVitrine from "@/assets/product-vitrine.asset.json";
+import productTable from "@/assets/product-table.asset.json";
+import productChair from "@/assets/product-chair.asset.json";
 
 const pageTitle =
   "Vinterior — Luxury Antique Furniture & Heritage Décor in Mumbai";
@@ -36,40 +29,23 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const collections = [
-  { name: "Antique Furniture", count: "84 pieces" },
-  { name: "Vintage Seating", count: "37 pieces" },
-  { name: "Cabinets", count: "29 pieces" },
-  { name: "Mirrors", count: "42 pieces" },
-  { name: "Lighting", count: "51 pieces" },
-  { name: "Décor", count: "112 pieces" },
-  { name: "Architectural", count: "24 pieces" },
-  { name: "Collectibles", count: "68 pieces" },
-];
-
 const arrivals = [
   {
-    img: pieceArmchair,
-    name: "Louis Philippe Armchair",
-    category: "Vintage Seating · France, c. 1870",
+    img: productVitrine.url,
+    name: "Louis XV Marquetry Vitrine",
+    category: "Antique Cabinets · France, 19th Century",
     price: "On Request",
   },
   {
-    img: pieceChandelier,
-    name: "Empire Crystal Chandelier",
-    category: "Antique Lighting · Italy, c. 1890",
+    img: productTable.url,
+    name: "Anglo-Indian Carved Centre Table",
+    category: "Heritage Furniture · Bombay, c. 1880",
     price: "On Request",
   },
   {
-    img: pieceMirror,
-    name: "Baroque Gilt Mirror",
-    category: "Antique Mirrors · Continental, c. 1860",
-    price: "On Request",
-  },
-  {
-    img: pieceCabinet,
-    name: "Anglo-Indian Rosewood Cabinet",
-    category: "Heritage Cabinets · Bombay, c. 1890",
+    img: productChair.url,
+    name: "Burmese Rosewood Chair & Stool",
+    category: "Carved Seating · Burma, 19th Century",
     price: "On Request",
   },
 ];
@@ -97,28 +73,16 @@ const pillars = [
   },
 ];
 
-const galleryImages = [
-  { src: gallery1, span: "row-span-2" },
-  { src: gallery2, span: "" },
-  { src: gallery3, span: "row-span-2" },
-  { src: gallery4, span: "" },
-  { src: gallery5, span: "row-span-2" },
-  { src: gallery6, span: "" },
-];
-
 function Home() {
   return (
     <div className="bg-warm-white text-charcoal">
       <Nav />
       <Hero />
-      <Collections />
       <Arrivals />
       <Story />
       <Pillars />
-      <Gallery />
       <Showroom />
       <Testimonials />
-      <Instagram />
       <Footer />
     </div>
   );
@@ -156,10 +120,8 @@ function Nav() {
         </a>
 
         <nav className="hidden items-center gap-10 text-xs font-medium uppercase tracking-[0.22em] text-charcoal/80 lg:flex">
-          <a href="#collections" className="hover:text-charcoal">Collections</a>
-          <a href="#arrivals" className="hover:text-charcoal">New Arrivals</a>
+          <a href="#arrivals" className="hover:text-charcoal">Pieces</a>
           <a href="#story" className="hover:text-charcoal">Our Story</a>
-          <a href="#gallery" className="hover:text-charcoal">Gallery</a>
           <a href="#showroom" className="hover:text-charcoal">Showroom</a>
         </nav>
 
@@ -213,8 +175,8 @@ function Hero() {
             className="mt-12 flex flex-wrap gap-4 fade-in-up"
             style={{ animationDelay: "750ms" }}
           >
-            <a href="#collections" className="btn-primary bg-ivory text-charcoal border-ivory hover:bg-gold hover:border-gold hover:text-charcoal">
-              Explore Collection
+            <a href="#arrivals" className="btn-primary bg-ivory text-charcoal border-ivory hover:bg-gold hover:border-gold hover:text-charcoal">
+              View Selected Pieces
             </a>
             <a href="#showroom" className="btn-ghost-light">
               Visit Showroom
@@ -259,54 +221,6 @@ function SectionHeader({
   );
 }
 
-function Collections() {
-  return (
-    <section id="collections" className="bg-ivory py-28 md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
-          <SectionHeader
-            eyebrow="The Collections"
-            title={
-              <>
-                Objects with a <em className="italic font-normal">past.</em>
-                <br />
-                Rooms with a <em className="italic font-normal">soul.</em>
-              </>
-            }
-          />
-          <a href="#" className="link-underline text-xs font-medium uppercase tracking-[0.24em] text-charcoal">
-            View All Categories
-          </a>
-        </div>
-
-        <div className="mt-20 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4 md:gap-x-10 md:gap-y-16">
-          {collections.map((c, i) => (
-            <a
-              key={c.name}
-              href="#"
-              className="group border-t border-charcoal/15 pt-6 transition-colors hover:border-charcoal"
-            >
-              <div className="flex items-baseline justify-between">
-                <span className="font-serif text-sm text-bronze">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                  {c.count}
-                </span>
-              </div>
-              <h3 className="mt-8 font-serif text-2xl text-charcoal transition-transform duration-500 group-hover:translate-x-1 md:text-3xl">
-                {c.name}
-              </h3>
-              <span className="mt-6 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/60 transition-colors group-hover:text-gold">
-                Explore →
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Arrivals() {
   return (
@@ -323,32 +237,28 @@ function Arrivals() {
           intro="A rotating selection of the most singular pieces to enter our gallery this season — each authenticated, restored, and ready for its next century."
         />
 
-        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-2">
+        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {arrivals.map((p) => (
-            <a key={p.name} href="#" className="group block">
-              <div className="relative aspect-[4/5] overflow-hidden bg-ivory">
+            <a key={p.name} href="https://wa.me/919820649649" target="_blank" rel="noreferrer" className="group block">
+              <div className="relative aspect-[3/4] overflow-hidden bg-ivory">
                 <img
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
+                  className="h-full w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
                 />
               </div>
-              <div className="mt-8 flex items-start justify-between gap-6">
-                <div>
-                  <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-bronze">
-                    {p.category}
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl text-charcoal md:text-3xl">
-                    {p.name}
-                  </h3>
-                </div>
-                <div className="text-right">
-                  <p className="font-serif text-lg italic text-charcoal">{p.price}</p>
-                  <span className="mt-3 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/70 border-b border-charcoal/30 pb-1 group-hover:border-charcoal group-hover:text-charcoal">
-                    View Details
-                  </span>
-                </div>
+              <div className="mt-6">
+                <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-bronze">
+                  {p.category}
+                </p>
+                <h3 className="mt-3 font-serif text-xl text-charcoal md:text-2xl">
+                  {p.name}
+                </h3>
+                <p className="mt-3 font-serif text-base italic text-charcoal/80">{p.price}</p>
+                <span className="mt-4 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/70 border-b border-charcoal/30 pb-1 group-hover:border-charcoal group-hover:text-charcoal">
+                  Enquire via WhatsApp →
+                </span>
               </div>
             </a>
           ))}
@@ -438,40 +348,6 @@ function Pillars() {
   );
 }
 
-function Gallery() {
-  return (
-    <section id="gallery" className="bg-warm-white py-28 md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <SectionHeader
-          eyebrow="From the Gallery"
-          title={
-            <>
-              A closer look at the <em className="italic font-normal">details.</em>
-            </>
-          }
-          intro="Fragments, textures, and moments from inside our showroom and the private homes we have helped furnish."
-          align="center"
-        />
-
-        <div className="mt-20 grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-          {galleryImages.map((g, i) => (
-            <figure
-              key={i}
-              className={`group relative overflow-hidden bg-ivory ${g.span}`}
-            >
-              <img
-                src={g.src}
-                alt="Vinterior gallery detail"
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.06]"
-              />
-            </figure>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Showroom() {
   return (
@@ -586,52 +462,7 @@ function Testimonials() {
   );
 }
 
-function Instagram() {
-  const tiles = [gallery3, gallery5, gallery1, gallery6, gallery4, gallery2];
-  return (
-    <section className="bg-warm-white py-28 md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <SectionHeader
-            eyebrow="Instagram"
-            title={
-              <>
-                @vinterior.co.in
-              </>
-            }
-          />
-          <a
-            href="https://www.instagram.com/vinterior.co.in/"
-            target="_blank"
-            rel="noreferrer"
-            className="link-underline text-xs font-medium uppercase tracking-[0.24em] text-charcoal"
-          >
-            Follow the Gallery
-          </a>
-        </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6 md:gap-4">
-          {tiles.map((t, i) => (
-            <a
-              key={i}
-              href="https://www.instagram.com/vinterior.co.in/"
-              target="_blank"
-              rel="noreferrer"
-              className="group relative aspect-square overflow-hidden bg-ivory"
-            >
-              <img
-                src={t}
-                alt="Vinterior Instagram post"
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Footer() {
   return (
@@ -656,12 +487,11 @@ function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="eyebrow text-gold">Gallery</h4>
+            <h4 className="eyebrow text-gold">Explore</h4>
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
-              <li><a href="#collections" className="hover:text-gold">Collections</a></li>
-              <li><a href="#arrivals" className="hover:text-gold">New Arrivals</a></li>
-              <li><a href="#gallery" className="hover:text-gold">Gallery</a></li>
+              <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
               <li><a href="#story" className="hover:text-gold">Our Story</a></li>
+              <li><a href="#showroom" className="hover:text-gold">Showroom</a></li>
             </ul>
           </div>
 
