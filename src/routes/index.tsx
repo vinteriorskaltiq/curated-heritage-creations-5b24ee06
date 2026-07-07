@@ -237,32 +237,28 @@ function Arrivals() {
           intro="A rotating selection of the most singular pieces to enter our gallery this season — each authenticated, restored, and ready for its next century."
         />
 
-        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-2">
+        <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {arrivals.map((p) => (
-            <a key={p.name} href="#" className="group block">
-              <div className="relative aspect-[4/5] overflow-hidden bg-ivory">
+            <a key={p.name} href="https://wa.me/919820649649" target="_blank" rel="noreferrer" className="group block">
+              <div className="relative aspect-[3/4] overflow-hidden bg-ivory">
                 <img
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
+                  className="h-full w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
                 />
               </div>
-              <div className="mt-8 flex items-start justify-between gap-6">
-                <div>
-                  <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-bronze">
-                    {p.category}
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl text-charcoal md:text-3xl">
-                    {p.name}
-                  </h3>
-                </div>
-                <div className="text-right">
-                  <p className="font-serif text-lg italic text-charcoal">{p.price}</p>
-                  <span className="mt-3 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/70 border-b border-charcoal/30 pb-1 group-hover:border-charcoal group-hover:text-charcoal">
-                    View Details
-                  </span>
-                </div>
+              <div className="mt-6">
+                <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-bronze">
+                  {p.category}
+                </p>
+                <h3 className="mt-3 font-serif text-xl text-charcoal md:text-2xl">
+                  {p.name}
+                </h3>
+                <p className="mt-3 font-serif text-base italic text-charcoal/80">{p.price}</p>
+                <span className="mt-4 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/70 border-b border-charcoal/30 pb-1 group-hover:border-charcoal group-hover:text-charcoal">
+                  Enquire via WhatsApp →
+                </span>
               </div>
             </a>
           ))}
