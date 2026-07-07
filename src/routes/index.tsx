@@ -175,8 +175,8 @@ function Hero() {
             className="mt-12 flex flex-wrap gap-4 fade-in-up"
             style={{ animationDelay: "750ms" }}
           >
-            <a href="#collections" className="btn-primary bg-ivory text-charcoal border-ivory hover:bg-gold hover:border-gold hover:text-charcoal">
-              Explore Collection
+            <a href="#arrivals" className="btn-primary bg-ivory text-charcoal border-ivory hover:bg-gold hover:border-gold hover:text-charcoal">
+              View Selected Pieces
             </a>
             <a href="#showroom" className="btn-ghost-light">
               Visit Showroom
