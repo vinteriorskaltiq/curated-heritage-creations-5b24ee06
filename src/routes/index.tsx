@@ -223,54 +223,6 @@ function SectionHeader({
   );
 }
 
-function Collections() {
-  return (
-    <section id="collections" className="bg-ivory py-28 md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
-          <SectionHeader
-            eyebrow="The Collections"
-            title={
-              <>
-                Objects with a <em className="italic font-normal">past.</em>
-                <br />
-                Rooms with a <em className="italic font-normal">soul.</em>
-              </>
-            }
-          />
-          <a href="#" className="link-underline text-xs font-medium uppercase tracking-[0.24em] text-charcoal">
-            View All Categories
-          </a>
-        </div>
-
-        <div className="mt-20 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4 md:gap-x-10 md:gap-y-16">
-          {collections.map((c, i) => (
-            <a
-              key={c.name}
-              href="#"
-              className="group border-t border-charcoal/15 pt-6 transition-colors hover:border-charcoal"
-            >
-              <div className="flex items-baseline justify-between">
-                <span className="font-serif text-sm text-bronze">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                  {c.count}
-                </span>
-              </div>
-              <h3 className="mt-8 font-serif text-2xl text-charcoal transition-transform duration-500 group-hover:translate-x-1 md:text-3xl">
-                {c.name}
-              </h3>
-              <span className="mt-6 inline-block text-[10px] font-medium uppercase tracking-[0.28em] text-charcoal/60 transition-colors group-hover:text-gold">
-                Explore →
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Arrivals() {
   return (
