@@ -29,40 +29,23 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const collections = [
-  { name: "Antique Furniture", count: "84 pieces" },
-  { name: "Vintage Seating", count: "37 pieces" },
-  { name: "Cabinets", count: "29 pieces" },
-  { name: "Mirrors", count: "42 pieces" },
-  { name: "Lighting", count: "51 pieces" },
-  { name: "Décor", count: "112 pieces" },
-  { name: "Architectural", count: "24 pieces" },
-  { name: "Collectibles", count: "68 pieces" },
-];
-
 const arrivals = [
   {
-    img: pieceArmchair,
-    name: "Louis Philippe Armchair",
-    category: "Vintage Seating · France, c. 1870",
+    img: productVitrine.url,
+    name: "Louis XV Marquetry Vitrine",
+    category: "Antique Cabinets · France, 19th Century",
     price: "On Request",
   },
   {
-    img: pieceChandelier,
-    name: "Empire Crystal Chandelier",
-    category: "Antique Lighting · Italy, c. 1890",
+    img: productTable.url,
+    name: "Anglo-Indian Carved Centre Table",
+    category: "Heritage Furniture · Bombay, c. 1880",
     price: "On Request",
   },
   {
-    img: pieceMirror,
-    name: "Baroque Gilt Mirror",
-    category: "Antique Mirrors · Continental, c. 1860",
-    price: "On Request",
-  },
-  {
-    img: pieceCabinet,
-    name: "Anglo-Indian Rosewood Cabinet",
-    category: "Heritage Cabinets · Bombay, c. 1890",
+    img: productChair.url,
+    name: "Burmese Rosewood Chair & Stool",
+    category: "Carved Seating · Burma, 19th Century",
     price: "On Request",
   },
 ];
@@ -90,28 +73,16 @@ const pillars = [
   },
 ];
 
-const galleryImages = [
-  { src: gallery1, span: "row-span-2" },
-  { src: gallery2, span: "" },
-  { src: gallery3, span: "row-span-2" },
-  { src: gallery4, span: "" },
-  { src: gallery5, span: "row-span-2" },
-  { src: gallery6, span: "" },
-];
-
 function Home() {
   return (
     <div className="bg-warm-white text-charcoal">
       <Nav />
       <Hero />
-      <Collections />
       <Arrivals />
       <Story />
       <Pillars />
-      <Gallery />
       <Showroom />
       <Testimonials />
-      <Instagram />
       <Footer />
     </div>
   );
