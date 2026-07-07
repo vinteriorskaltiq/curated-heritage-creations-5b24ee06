@@ -354,40 +354,6 @@ function Pillars() {
   );
 }
 
-function Gallery() {
-  return (
-    <section id="gallery" className="bg-warm-white py-28 md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <SectionHeader
-          eyebrow="From the Gallery"
-          title={
-            <>
-              A closer look at the <em className="italic font-normal">details.</em>
-            </>
-          }
-          intro="Fragments, textures, and moments from inside our showroom and the private homes we have helped furnish."
-          align="center"
-        />
-
-        <div className="mt-20 grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-          {galleryImages.map((g, i) => (
-            <figure
-              key={i}
-              className={`group relative overflow-hidden bg-ivory ${g.span}`}
-            >
-              <img
-                src={g.src}
-                alt="Vinterior gallery detail"
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.06]"
-              />
-            </figure>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Showroom() {
   return (
@@ -502,19 +468,6 @@ function Testimonials() {
   );
 }
 
-function Instagram() {
-  const tiles = [gallery3, gallery5, gallery1, gallery6, gallery4, gallery2];
-  return (
-    <section className="bg-warm-white py-28 md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <SectionHeader
-            eyebrow="Instagram"
-            title={
-              <>
-                @vinterior.co.in
-              </>
-            }
           />
           <a
             href="https://www.instagram.com/vinterior.co.in/"
