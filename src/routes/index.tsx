@@ -468,39 +468,7 @@ function Testimonials() {
   );
 }
 
-          />
-          <a
-            href="https://www.instagram.com/vinterior.co.in/"
-            target="_blank"
-            rel="noreferrer"
-            className="link-underline text-xs font-medium uppercase tracking-[0.24em] text-charcoal"
-          >
-            Follow the Gallery
-          </a>
-        </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6 md:gap-4">
-          {tiles.map((t, i) => (
-            <a
-              key={i}
-              href="https://www.instagram.com/vinterior.co.in/"
-              target="_blank"
-              rel="noreferrer"
-              className="group relative aspect-square overflow-hidden bg-ivory"
-            >
-              <img
-                src={t}
-                alt="Vinterior Instagram post"
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Footer() {
   return (
