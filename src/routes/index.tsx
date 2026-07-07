@@ -487,12 +487,11 @@ function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="eyebrow text-gold">Gallery</h4>
+            <h4 className="eyebrow text-gold">Explore</h4>
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
-              <li><a href="#collections" className="hover:text-gold">Collections</a></li>
-              <li><a href="#arrivals" className="hover:text-gold">New Arrivals</a></li>
-              <li><a href="#gallery" className="hover:text-gold">Gallery</a></li>
+              <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
               <li><a href="#story" className="hover:text-gold">Our Story</a></li>
+              <li><a href="#showroom" className="hover:text-gold">Showroom</a></li>
             </ul>
           </div>
 
