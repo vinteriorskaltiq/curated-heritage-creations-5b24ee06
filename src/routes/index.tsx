@@ -120,10 +120,8 @@ function Nav() {
         </a>
 
         <nav className="hidden items-center gap-10 text-xs font-medium uppercase tracking-[0.22em] text-charcoal/80 lg:flex">
-          <a href="#collections" className="hover:text-charcoal">Collections</a>
-          <a href="#arrivals" className="hover:text-charcoal">New Arrivals</a>
+          <a href="#arrivals" className="hover:text-charcoal">Pieces</a>
           <a href="#story" className="hover:text-charcoal">Our Story</a>
-          <a href="#gallery" className="hover:text-charcoal">Gallery</a>
           <a href="#showroom" className="hover:text-charcoal">Showroom</a>
         </nav>
 
