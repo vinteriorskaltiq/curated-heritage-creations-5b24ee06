@@ -656,6 +656,7 @@ function Footer() {
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
               <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
               <li><a href="#story" className="hover:text-gold">Our Story</a></li>
+              <li><Link to="/journal" className="hover:text-gold">Journal</Link></li>
               <li><a href="#showroom" className="hover:text-gold">Showroom</a></li>
             </ul>
           </div>
