@@ -109,7 +109,7 @@ function PostPage() {
         </h1>
 
         <div className="mt-14 space-y-8 font-serif text-[19px] leading-[1.7] text-charcoal/90 md:text-[20px]">
-          {post.body.map((block, i) => (
+          {post.body.map((block: { h?: string; p: string }, i: number) => (
             <div key={i}>
               {block.h && (
                 <h2 className="mt-14 mb-6 font-serif text-2xl italic text-charcoal md:text-3xl">
