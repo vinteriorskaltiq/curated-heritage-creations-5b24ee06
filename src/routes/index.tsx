@@ -290,14 +290,29 @@ function Nav() {
           <a href="#showroom" className="hover:text-charcoal">Showroom</a>
         </nav>
 
-        <a
-          href="https://wa.me/919820649649"
-          target="_blank"
-          rel="noreferrer"
-          className="hidden text-xs font-medium uppercase tracking-[0.22em] text-charcoal border-b border-charcoal/40 pb-1 hover:border-charcoal md:inline-block"
-        >
-          Enquire
-        </a>
+        <div className="hidden items-center gap-6 md:flex">
+          <a
+            href="https://www.instagram.com/vinteriorstoreindia/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Vinterior on Instagram"
+            className="text-charcoal/70 hover:text-charcoal transition-colors"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a
+            href="https://wa.me/919820649649"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs font-medium uppercase tracking-[0.22em] text-charcoal border-b border-charcoal/40 pb-1 hover:border-charcoal"
+          >
+            Enquire
+          </a>
+        </div>
       </div>
     </header>
   );
