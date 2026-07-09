@@ -67,7 +67,7 @@ export const Route = createFileRoute("/")({
               name: "Where is Vinterior located in Mumbai?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Vinterior is located at G-74 / G-75 / G-76, An Nasr (Sector 4), Mutton Street, Chor Bazaar, Mumbai — 400003. Chor Bazaar is India's oldest antique district and Vinterior is one of its longest-standing curated galleries.",
+                text: "Vinterior is located at G-74 / G-75 / G-76, An Nasr, G-74/75/76, Mutton Street, Chor Bazaar, Kumbharwada, Mumbai, Maharashtra 400008. Chor Bazaar is India's oldest antique district and Vinterior is one of its longest-standing curated galleries.",
               },
             },
             {
@@ -764,7 +764,7 @@ function Footer() {
             <address className="mt-6 not-italic text-sm font-light leading-relaxed text-ivory/70">
               G-74 / G-75 / G-76<br />
               An Nasr (Sector 4), Mutton Street<br />
-              Mumbai — 400003, India
+              Mumbai, Maharashtra 400008, India
             </address>
             <ul className="mt-6 space-y-2 text-sm text-ivory/85">
               <li>
@@ -782,7 +782,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/vinterior.co.in/"
+                  href="https://www.instagram.com/vinteriorstoreindia/"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-gold"
