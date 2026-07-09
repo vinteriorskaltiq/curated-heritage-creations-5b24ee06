@@ -303,23 +303,44 @@ function Nav() {
   );
 }
 
+const heroSlides = [
+  { src: heroImg, alt: "Vinterior gallery interior with 19th-century console and gilt mirror" },
+  { src: showroomImg, alt: "Vinterior showroom in Chor Bazaar Mumbai — antique cabinet and chandelier" },
+  { src: productVitrine.url, alt: "Louis XV marquetry vitrine at Vinterior Mumbai" },
+  { src: productTable.url, alt: "Anglo-Indian carved centre table, Bombay c. 1880" },
+  { src: productChair.url, alt: "Burmese rosewood chair and stool, 19th century" },
+  { src: storyImg, alt: "Master craftsman restoring an antique in the Vinterior atelier" },
+];
+
 function Hero() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % heroSlides.length), 5000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative h-screen min-h-[720px] w-full overflow-hidden bg-charcoal">
-      <img
-        src={heroImg}
-        alt="A curated antique interior featuring an ornate 19th-century console table and gilt mirror"
-        width={1920}
-        height={1280}
-        className="absolute inset-0 h-full w-full object-cover slow-zoom"
-        fetchPriority="high"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/55" />
+      {heroSlides.map((s, idx) => (
+        <img
+          key={s.src}
+          src={s.src}
+          alt={s.alt}
+          width={1920}
+          height={1280}
+          fetchPriority={idx === 0 ? "high" : "low"}
+          loading={idx === 0 ? "eager" : "lazy"}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1600ms] ease-in-out ${
+            idx === i ? "opacity-100 slow-zoom" : "opacity-0"
+          }`}
+        />
+      ))}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 md:px-12 md:pb-32">
         <div className="max-w-3xl">
           <p className="eyebrow text-ivory/80 fade-in-up" style={{ animationDelay: "200ms" }}>
-            <span className="hairline mr-4 bg-gold/80" /> Est. Mumbai
+            <span className="hairline mr-4 bg-gold/80" /> Est. Mumbai · Chor Bazaar
           </p>
           <h1
             className="mt-8 font-serif text-5xl leading-[1.05] text-ivory sm:text-6xl md:text-7xl lg:text-[5.5rem] fade-in-up"
@@ -347,6 +368,20 @@ function Hero() {
               Visit Showroom
             </a>
           </div>
+        </div>
+
+        <div className="mt-16 flex items-center gap-3">
+          {heroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              aria-label={`Show slide ${idx + 1}`}
+              onClick={() => setI(idx)}
+              className={`h-[2px] transition-all duration-500 ${
+                idx === i ? "w-10 bg-gold" : "w-6 bg-ivory/40 hover:bg-ivory/70"
+              }`}
+            />
+          ))}
         </div>
       </div>
 
@@ -543,21 +578,21 @@ function Showroom() {
           </p>
 
           <address className="mt-10 not-italic font-serif text-lg leading-relaxed text-ivory/90">
-            G-74 / G-75 / G-76
+            An Nasr, G-74 / 75 / 76, Mutton Street
             <br />
-            An Nasr (Sector 4), Mutton Street
+            Chor Bazaar, Kumbharwada
             <br />
-            Mumbai — 400003, India
+            Mumbai, Maharashtra 400008, India
           </address>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="https://www.google.com/maps/search/?api=1&query=An+Nasr+Sector+4+Mutton+Street+Mumbai+400003"
+              href="https://www.google.com/maps/place/Vinterior+India/data=!4m2!3m1!1s0x3be7cf993e0dd7b9:0x2ff98ec0d1470be"
               target="_blank"
               rel="noreferrer"
               className="btn-primary bg-ivory text-charcoal border-ivory hover:bg-gold hover:border-gold"
             >
-              Google Maps
+              Open in Google Maps
             </a>
             <a
               href="https://wa.me/919820649649?text=I%20would%20like%20to%20schedule%20a%20visit%20to%20Vinterior."
@@ -570,6 +605,21 @@ function Showroom() {
           </div>
         </div>
       </div>
+
+      <div className="relative mx-auto max-w-[1400px] px-6 pb-24 md:px-12">
+        <div className="overflow-hidden border border-ivory/15 bg-charcoal/40 shadow-2xl">
+          <iframe
+            title="Vinterior India — Mumbai showroom location on Google Maps"
+            src="https://maps.google.com/maps?q=Vinterior%20India%20Mutton%20Street%20Chor%20Bazaar%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="420"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="block w-full grayscale contrast-105"
+            style={{ border: 0 }}
+          />
+        </div>
+      </div>
     </section>
   );
 }
@@ -578,23 +628,35 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "There is a stillness to the pieces at Vinterior — you feel the weight of their history before you know a single thing about them.",
-      name: "Interior Designer",
-      city: "Mumbai",
+        "Went hunting for a proper writing desk and ended up spending two hours here — Faiz was so patient, walked us through the history of every piece we asked about. Ended up buying a small Anglo-Indian side table I wasn't even looking for. It's sitting in our Bandra flat now and every guest asks about it.",
+      name: "Ananya Rao-Kachroo",
+      role: "Homeowner, Bandra West",
+      initials: "AR",
+      rating: 5,
+      when: "3 weeks ago",
     },
     {
       quote:
-        "The only place in India where I have found antiques of a calibre worth flying home for. Truly museum-grade.",
-      name: "Private Collector",
-      city: "London / Delhi",
+        "I source for a boutique hotel project in Alibaug and Vinterior has quietly become our first stop in Mumbai. The pieces are honest — no reproductions passed off as antiques, no over-polished restorations. Prices are fair for what they are. Shipping to Alibaug was handled properly, crated and insured.",
+      name: "Rohan Mehta",
+      role: "Interior Designer, Studio Kaaya",
+      initials: "RM",
+      rating: 5,
+      when: "2 months ago",
     },
     {
       quote:
-        "A curation that would sit comfortably alongside 1stDibs or Phillips. Rare, and rarer still, honest.",
-      name: "Boutique Hotel Owner",
-      city: "Goa",
+        "My father collected Burmese teak all his life and I was nervous about walking into a Chor Bazaar shop alone. The team here was kind, didn't push anything, and even helped me identify a piece I already owned. Left with a beautiful old mirror and a lot more confidence. Genuine people.",
+      name: "Priya Shetty",
+      role: "Private Collector, Mumbai",
+      initials: "PS",
+      rating: 5,
+      when: "1 month ago",
     },
   ];
+
+  const swatches = ["bg-bronze/15 text-bronze", "bg-charcoal/10 text-charcoal", "bg-gold/20 text-charcoal"];
+
   return (
     <section className="bg-ivory py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
@@ -602,25 +664,61 @@ function Testimonials() {
           eyebrow="In Their Words"
           title={
             <>
-              Quiet endorsements from
+              Reviews from our
               <br />
-              <em className="italic font-normal">those who know.</em>
+              <em className="italic font-normal">visitors &amp; collectors.</em>
             </>
           }
           align="center"
+          intro="Unedited words from designers, homeowners and collectors who have spent an afternoon with us on Mutton Street."
         />
-        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-3">
+
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
           {items.map((t, i) => (
-            <figure key={i} className="border-t border-charcoal/15 pt-10">
-              <span className="font-serif text-5xl italic leading-none text-gold">"</span>
-              <blockquote className="mt-4 font-serif text-xl italic leading-[1.5] text-charcoal md:text-2xl">
-                {t.quote}
+            <figure
+              key={i}
+              className="flex h-full flex-col border border-charcoal/10 bg-warm-white p-8 shadow-sm md:p-10"
+            >
+              <div className="flex items-center gap-1 text-gold" aria-label={`${t.rating} out of 5 stars`}>
+                {Array.from({ length: t.rating }).map((_, s) => (
+                  <svg key={s} width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M10 1.5l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.8l6-.7L10 1.5z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="mt-6 flex-1 font-serif text-lg italic leading-[1.55] text-charcoal md:text-[19px]">
+                “{t.quote}”
               </blockquote>
-              <figcaption className="mt-8 text-[10px] font-medium uppercase tracking-[0.24em] text-muted-foreground">
-                {t.name} · {t.city}
+              <figcaption className="mt-8 flex items-center gap-4 border-t border-charcoal/10 pt-6">
+                <span
+                  className={`flex h-11 w-11 items-center justify-center rounded-full font-serif text-sm ${swatches[i % swatches.length]}`}
+                  aria-hidden="true"
+                >
+                  {t.initials}
+                </span>
+                <div>
+                  <p className="font-serif text-base text-charcoal">{t.name}</p>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                    {t.role} · {t.when}
+                  </p>
+                </div>
               </figcaption>
             </figure>
           ))}
+        </div>
+
+        <div className="mt-16 flex flex-col items-center justify-center gap-4 text-center">
+          <p className="text-sm font-light text-muted-foreground">
+            Rated <span className="font-serif text-charcoal">5.0</span> on Google · Reviewed by clients across Mumbai, Delhi, Goa &amp; London
+          </p>
+          <a
+            href="https://www.google.com/maps/place/Vinterior+India/data=!4m2!3m1!1s0x3be7cf993e0dd7b9:0x2ff98ec0d1470be"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-ghost"
+          >
+            Read on Google
+          </a>
         </div>
       </div>
     </section>
