@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getCollection, collections } from "@/lib/collections";
+import { getCollection, collections, type CollectionPage } from "@/lib/collections";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/collections/$slug")({
@@ -86,9 +86,9 @@ export const Route = createFileRoute("/collections/$slug")({
 });
 
 function CollectionDetail() {
-  const c = Route.useLoaderData();
+  const c = Route.useLoaderData() as CollectionPage;
   const relatedItems = c.related
-    .map((slug) => collections.find((x) => x.slug === slug))
+    .map((slug: string) => collections.find((x) => x.slug === slug))
     .filter((x): x is NonNullable<typeof x> => Boolean(x));
 
   return (
@@ -120,7 +120,7 @@ function CollectionDetail() {
       {/* BODY */}
       <article className="mx-auto max-w-[860px] px-6 pt-8 pb-20 md:px-8">
         <div className="space-y-6 font-serif text-[19px] leading-[1.7] text-charcoal/90 md:text-[20px]">
-          {c.body.map((block, i) => (
+          {c.body.map((block: { h?: string; p: string }, i: number) => (
             <div key={i}>
               {block.h && (
                 <h2 className="mt-14 mb-5 font-serif text-2xl italic text-charcoal md:text-3xl">
@@ -137,7 +137,7 @@ function CollectionDetail() {
           <p className="eyebrow"><span className="hairline mr-3" /> Frequently Asked</p>
           <h2 className="mt-6 font-serif text-3xl leading-tight md:text-4xl">Questions collectors ask.</h2>
           <dl className="mt-10 divide-y divide-charcoal/10 border-y border-charcoal/10">
-            {c.faqs.map((f) => (
+            {c.faqs.map((f: { q: string; a: string }) => (
               <div key={f.q} className="py-8">
                 <dt className="font-serif text-xl text-charcoal md:text-2xl">{f.q}</dt>
                 <dd className="mt-4 text-base font-light leading-relaxed text-muted-foreground">{f.a}</dd>
@@ -174,7 +174,7 @@ function CollectionDetail() {
           <div className="mt-20 border-t border-charcoal/15 pt-14">
             <p className="eyebrow"><span className="hairline mr-3" /> Related Collections</p>
             <ul className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-              {relatedItems.map((r) => (
+              {relatedItems.map((r: CollectionPage) => (
                 <li key={r.slug}>
                   <Link
                     to="/collections/$slug"
