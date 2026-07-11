@@ -10,13 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as JournalIndexRouteImport } from './routes/journal.index'
+import { Route as CollectionsIndexRouteImport } from './routes/collections.index'
 import { Route as JournalSlugRouteImport } from './routes/journal.$slug'
+import { Route as CollectionsSlugRouteImport } from './routes/collections.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -29,43 +37,87 @@ const JournalIndexRoute = JournalIndexRouteImport.update({
   path: '/journal/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CollectionsIndexRoute = CollectionsIndexRouteImport.update({
+  id: '/collections/',
+  path: '/collections/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JournalSlugRoute = JournalSlugRouteImport.update({
   id: '/journal/$slug',
   path: '/journal/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CollectionsSlugRoute = CollectionsSlugRouteImport.update({
+  id: '/collections/$slug',
+  path: '/collections/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/collections/$slug': typeof CollectionsSlugRoute
   '/journal/$slug': typeof JournalSlugRoute
+  '/collections/': typeof CollectionsIndexRoute
   '/journal/': typeof JournalIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/collections/$slug': typeof CollectionsSlugRoute
   '/journal/$slug': typeof JournalSlugRoute
+  '/collections': typeof CollectionsIndexRoute
   '/journal': typeof JournalIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/collections/$slug': typeof CollectionsSlugRoute
   '/journal/$slug': typeof JournalSlugRoute
+  '/collections/': typeof CollectionsIndexRoute
   '/journal/': typeof JournalIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml' | '/journal/$slug' | '/journal/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/collections/$slug'
+    | '/journal/$slug'
+    | '/collections/'
+    | '/journal/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml' | '/journal/$slug' | '/journal'
-  id: '__root__' | '/' | '/sitemap.xml' | '/journal/$slug' | '/journal/'
+  to:
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/collections/$slug'
+    | '/journal/$slug'
+    | '/collections'
+    | '/journal'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/sitemap.xml'
+    | '/collections/$slug'
+    | '/journal/$slug'
+    | '/collections/'
+    | '/journal/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CollectionsSlugRoute: typeof CollectionsSlugRoute
   JournalSlugRoute: typeof JournalSlugRoute
+  CollectionsIndexRoute: typeof CollectionsIndexRoute
   JournalIndexRoute: typeof JournalIndexRoute
 }
 
@@ -76,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -92,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/collections/': {
+      id: '/collections/'
+      path: '/collections'
+      fullPath: '/collections/'
+      preLoaderRoute: typeof CollectionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/journal/$slug': {
       id: '/journal/$slug'
       path: '/journal/$slug'
@@ -99,13 +165,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/collections/$slug': {
+      id: '/collections/$slug'
+      path: '/collections/$slug'
+      fullPath: '/collections/$slug'
+      preLoaderRoute: typeof CollectionsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CollectionsSlugRoute: CollectionsSlugRoute,
   JournalSlugRoute: JournalSlugRoute,
+  CollectionsIndexRoute: CollectionsIndexRoute,
   JournalIndexRoute: JournalIndexRoute,
 }
 export const routeTree = rootRouteImport

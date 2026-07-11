@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { journalPosts } from "@/lib/journal";
+import { collections } from "@/lib/collections";
 
-// TODO: replace with your project URL once a project name or custom domain is set.
 const BASE_URL = "";
 
 interface SitemapEntry {
@@ -18,7 +18,14 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/about", changefreq: "monthly", priority: "0.9" },
+          { path: "/collections", changefreq: "monthly", priority: "0.9" },
           { path: "/journal", changefreq: "monthly", priority: "0.8" },
+          ...collections.map((c) => ({
+            path: `/collections/${c.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.85",
+          })),
           ...journalPosts.map((p) => ({
             path: `/journal/${p.slug}`,
             lastmod: p.date,

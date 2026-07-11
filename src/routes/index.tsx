@@ -285,7 +285,8 @@ function Nav() {
 
         <nav className="hidden items-center gap-10 text-xs font-medium uppercase tracking-[0.22em] text-charcoal/80 lg:flex">
           <a href="#arrivals" className="hover:text-charcoal">Pieces</a>
-          <a href="#story" className="hover:text-charcoal">Our Story</a>
+          <Link to="/collections" className="hover:text-charcoal">Collections</Link>
+          <Link to="/about" className="hover:text-charcoal">About</Link>
           <Link to="/journal" className="hover:text-charcoal">Journal</Link>
           <a href="#showroom" className="hover:text-charcoal">Showroom</a>
         </nav>
@@ -768,7 +769,8 @@ function Footer() {
             <h4 className="eyebrow text-gold">Explore</h4>
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
               <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
-              <li><a href="#story" className="hover:text-gold">Our Story</a></li>
+              <li><Link to="/collections" className="hover:text-gold">Collections</Link></li>
+              <li><Link to="/about" className="hover:text-gold">About</Link></li>
               <li><Link to="/journal" className="hover:text-gold">Journal</Link></li>
               <li><a href="#showroom" className="hover:text-gold">Showroom</a></li>
             </ul>
