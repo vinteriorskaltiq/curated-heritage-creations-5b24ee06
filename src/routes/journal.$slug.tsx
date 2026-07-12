@@ -142,7 +142,7 @@ function PostPage() {
         <div className="mt-16 rounded-none border border-charcoal/15 bg-ivory p-8 md:p-10">
           <p className="eyebrow"><span className="hairline mr-3" />Visit the Gallery</p>
           <h3 className="mt-4 font-serif text-2xl leading-snug md:text-3xl">
-            See these pieces in person at Chor Bazaar, Mumbai.
+            See these pieces in person at our Mumbai gallery.
           </h3>
           <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
             Our private showroom on Mutton Street welcomes collectors, designers and clients by appointment.
