@@ -414,55 +414,6 @@ function Arrivals() {
   );
 }
 
-function Story() {
-  return (
-    <section id="story" className="bg-ivory py-28 md:py-40">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-16 px-6 md:grid-cols-12 md:gap-20 md:px-12">
-        <div className="md:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden bg-warm-white">
-            <img
-              src={storyImg}
-              alt="Vinterior master craftsman restoring an antique wood carving in the Mumbai atelier"
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col justify-center md:col-span-6">
-          <p className="eyebrow">
-            <span className="hairline mr-3" />
-            Our Story
-          </p>
-          <h2 className="mt-6 font-serif text-4xl leading-[1.1] text-charcoal md:text-5xl lg:text-[3.25rem]">
-            A quiet gallery of things
-            <br />
-            <em className="italic font-normal">that outlive us.</em>
-          </h2>
-          <div className="mt-10 space-y-6 text-base font-light leading-relaxed text-muted-foreground md:text-[17px]">
-            <p>
-              Vinterior began on Mutton Street in Mumbai's Chor Bazaar — the oldest antique
-              district in India — with a single premise: that a room furnished with history
-              feels different from a room merely decorated.
-            </p>
-            <p>
-              For over two decades, our founders have travelled the estates of Europe, the
-              havelis of Rajasthan, the colonial homes of Goa and Bombay, and the ateliers of
-              old craftsmen still working in walnut, teak, brass and gilt. What returns to our
-              gallery has been authenticated, catalogued, and restored — never reimagined.
-            </p>
-            <p>
-              We are not a furniture store. We are a private gallery of heritage objects,
-              held in trust for the collectors who will one day pass them on.
-            </p>
-          </div>
-          <div className="mt-12">
-            <a href="#" className="btn-ghost">Read Our Story</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Pillars() {
   return (
