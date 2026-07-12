@@ -543,7 +543,7 @@ function Testimonials() {
     },
     {
       quote:
-        "My father collected Burmese teak all his life and I was nervous about walking into a Chor Bazaar shop alone. The team here was kind, didn't push anything, and even helped me identify a piece I already owned. Left with a beautiful old mirror and a lot more confidence. Genuine people.",
+        "My father collected Burmese teak all his life and I was nervous about walking into an antique shop alone. The team here was kind, didn't push anything, and even helped me identify a piece I already owned. Left with a beautiful old mirror and a lot more confidence. Genuine people.",
       name: "Priya Shetty",
       role: "Private Collector, Mumbai",
       initials: "PS",
