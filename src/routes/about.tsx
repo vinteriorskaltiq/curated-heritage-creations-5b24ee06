@@ -239,11 +239,11 @@ function AboutPage() {
           </div>
           <div className="md:col-span-7">
             <div className="mb-6 overflow-hidden">
-              <img src={showroomImg} alt="Vinterior showroom at Chor Bazaar, Mumbai" className="h-[280px] w-full object-cover" />
+              <img src={showroomImg} alt="Vinterior showroom in Mumbai" className="h-[280px] w-full object-cover" />
             </div>
             <iframe
               title="Vinterior India location on Google Maps"
-              src="https://www.google.com/maps?q=Vinterior+India+Chor+Bazaar+Mumbai&output=embed"
+              src="https://www.google.com/maps?q=Vinterior+India+Mumbai&output=embed"
               width="100%"
               height="360"
               loading="lazy"
