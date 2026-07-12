@@ -49,7 +49,7 @@ export const Route = createFileRoute("/about")({
             image: heroImg,
             address: {
               "@type": "PostalAddress",
-              streetAddress: "G-74 / G-75 / G-76, An Nasr, Mutton Street, Chor Bazaar",
+              streetAddress: "G-74 / G-75 / G-76, An Nasr, Mutton Street",
               addressLocality: "Mumbai",
               postalCode: "400008",
               addressCountry: "IN",
