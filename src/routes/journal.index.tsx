@@ -80,7 +80,7 @@ function JournalIndex() {
           The Vinterior <em className="italic font-normal">Journal.</em>
         </h1>
         <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-muted-foreground">
-          Occasional writing on antique furniture, restoration, provenance, Chor Bazaar and the
+          Occasional writing on antique furniture, restoration, provenance and the
           quiet craft of collecting. Written from our gallery in Mumbai.
         </p>
       </section>
