@@ -153,7 +153,7 @@ function CollectionDetail() {
             See these pieces in person at our Mumbai gallery.
           </h3>
           <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
-            Vinterior is at G-74 / G-75 / G-76, An Nasr, Mutton Street, Chor Bazaar, Mumbai. Visits are
+            Vinterior is at G-74 / G-75 / G-76, An Nasr, Mutton Street, Mumbai. Visits are
             welcomed by appointment; enquiries by WhatsApp are answered the same day.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
