@@ -45,8 +45,7 @@ export function SiteHeader() {
 
   return (
     <>
-      {/* Spacer so page content doesn't sit under the floating nav (skip when hero overlays) */}
-      {!overlay && <div aria-hidden className="h-24 md:h-28" />}
+      {/* No spacer — nav floats over page hero; pages without a hero add their own top padding. */}
 
       <header
         className="fixed inset-x-0 top-0 z-50 pointer-events-none"
