@@ -12,7 +12,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Showroom", href: "/#showroom" },
 ];
 
-export function SiteHeader() {
+export function SiteHeader({ overlay = false }: { overlay?: boolean } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { location } = useRouterState();
