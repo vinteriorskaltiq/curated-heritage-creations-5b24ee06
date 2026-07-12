@@ -49,7 +49,7 @@ export const Route = createFileRoute("/about")({
             image: heroImg,
             address: {
               "@type": "PostalAddress",
-              streetAddress: "G-74 / G-75 / G-76, An Nasr, Mutton Street, Chor Bazaar",
+              streetAddress: "G-74 / G-75 / G-76, An Nasr, Mutton Street",
               addressLocality: "Mumbai",
               postalCode: "400008",
               addressCountry: "IN",
@@ -112,47 +112,6 @@ function AboutPage() {
             A third-generation family enterprise dedicated to sourcing, restoring and curating
             exceptional antique furniture and rare collectibles.
           </p>
-        </div>
-      </section>
-
-      {/* OUR STORY */}
-      <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-12 md:py-40">
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-20">
-          <div className="md:col-span-5">
-            <p className="eyebrow"><span className="hairline mr-3" /> Our Story</p>
-            <h2 className="mt-8 font-serif text-4xl leading-[1.1] md:text-5xl">
-              Three generations of quiet curation.
-            </h2>
-            <div className="mt-10 overflow-hidden">
-              <img
-                src={storyImg}
-                alt="Vinterior atelier — master craftsman restoring antique furniture in Mumbai"
-                className="h-[420px] w-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-6 md:col-start-7 md:pt-16">
-            <div className="space-y-6 font-serif text-[19px] leading-[1.7] text-charcoal/90 md:text-[20px]">
-              <p>
-                Vinterior is a third-generation family enterprise founded in 1955, carrying forward
-                a legacy of craftsmanship, curation and timeless design built over generations.
-              </p>
-              <p>
-                Established by our grandfather, Vinterior has become one of Mumbai's most trusted
-                destinations for collectors, architects, interior designers, luxury residences,
-                hospitality projects and homeowners seeking authentic antique furniture and rare
-                decorative pieces.
-              </p>
-              <p>
-                For over seven decades we have specialised in sourcing, restoring and curating
-                exceptional antiques that preserve history while complementing contemporary interiors.
-              </p>
-              <p>
-                Every piece is selected for its authenticity, craftsmanship, historical significance
-                and enduring value.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -250,13 +209,13 @@ function AboutPage() {
           <div className="md:col-span-5">
             <p className="eyebrow"><span className="hairline mr-3" /> Visit Our Gallery</p>
             <h2 className="mt-8 font-serif text-4xl leading-[1.1] md:text-5xl">
-              Vinterior, <em className="italic font-normal">Chor Bazaar.</em>
+              Vinterior, <em className="italic font-normal">Mumbai.</em>
             </h2>
             <address className="mt-10 not-italic font-serif text-xl leading-[1.6] text-charcoal/90">
               Vinterior<br />
               G-74 / G-75 / G-76<br />
               An Nasr, Sector 4, Mutton Street<br />
-              Chor Bazaar, Kumbharwada<br />
+              Kumbharwada<br />
               Mumbai 400008, Maharashtra, India
             </address>
             <div className="mt-10 space-y-2 text-sm text-charcoal/80">
@@ -280,11 +239,11 @@ function AboutPage() {
           </div>
           <div className="md:col-span-7">
             <div className="mb-6 overflow-hidden">
-              <img src={showroomImg} alt="Vinterior showroom at Chor Bazaar, Mumbai" className="h-[280px] w-full object-cover" />
+              <img src={showroomImg} alt="Vinterior showroom in Mumbai" className="h-[280px] w-full object-cover" />
             </div>
             <iframe
               title="Vinterior India location on Google Maps"
-              src="https://www.google.com/maps?q=Vinterior+India+Chor+Bazaar+Mumbai&output=embed"
+              src="https://www.google.com/maps?q=Vinterior+India+Mumbai&output=embed"
               width="100%"
               height="360"
               loading="lazy"

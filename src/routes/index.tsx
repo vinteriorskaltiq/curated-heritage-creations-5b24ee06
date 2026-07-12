@@ -12,18 +12,16 @@ import productTable from "@/assets/product-table.asset.json";
 import productChair from "@/assets/product-chair.asset.json";
 
 const pageTitle =
-  "Vinterior — Antique Furniture Gallery in Mumbai | Chor Bazaar Heritage Décor";
+  "Vinterior — Antique Furniture Gallery in Mumbai | Heritage Décor";
 const pageDescription =
-  "Vinterior is a private antique furniture gallery on Mutton Street, Chor Bazaar, Mumbai. Authenticated 18th & 19th-century European, Anglo-Indian, colonial and vintage furniture, chandeliers, mirrors, cabinets and heritage décor — restored in-house for collectors, interior designers and heritage homes across India.";
+  "Vinterior is a private antique furniture gallery on Mutton Street, Mumbai. Authenticated 18th & 19th-century European, Anglo-Indian, colonial and vintage furniture, chandeliers, mirrors, cabinets and heritage décor — restored in-house for collectors, interior designers and heritage homes across India.";
 const pageKeywords = [
   "Vinterior",
   "Vinterior Mumbai",
-  "Vinterior Chor Bazaar",
   "Vinterior Furniture",
   "antique furniture Mumbai",
   "antique shop Mumbai",
   "antique dealers Mumbai",
-  "Chor Bazaar antiques",
   "Mutton Street Mumbai",
   "vintage furniture India",
   "colonial furniture Mumbai",
@@ -68,7 +66,7 @@ export const Route = createFileRoute("/")({
               name: "Where is Vinterior located in Mumbai?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Vinterior is located at G-74 / G-75 / G-76, An Nasr, G-74/75/76, Mutton Street, Chor Bazaar, Kumbharwada, Mumbai, Maharashtra 400008. Chor Bazaar is India's oldest antique district and Vinterior is one of its longest-standing curated galleries.",
+                text: "Vinterior is located at G-74 / G-75 / G-76, An Nasr, G-74/75/76, Mutton Street, Kumbharwada, Mumbai, Maharashtra 400008. Vinterior is one of Mumbai's longest-standing curated antique furniture galleries.",
               },
             },
             {
@@ -152,7 +150,6 @@ function Home() {
       <SiteHeader />
       <Hero />
       <Arrivals />
-      <Story />
       <Pillars />
       <Showroom />
       <Testimonials />
@@ -173,8 +170,7 @@ function SeoContext() {
         </h2>
         <div className="mt-8 space-y-5 text-[15px] font-light leading-[1.85] text-muted-foreground md:text-base">
           <p>
-            Vinterior is a private antique furniture gallery on Mutton Street in Chor Bazaar, Mumbai —
-            India's oldest and most storied antique district. For over two decades our family has
+            Vinterior is a private antique furniture gallery on Mutton Street in Mumbai. For over two decades our family has
             dealt in <strong className="font-medium text-charcoal">18th and 19th-century European antiques</strong>,
             <strong className="font-medium text-charcoal"> Anglo-Indian and colonial furniture</strong>,
             Burmese teak and rosewood, gilt mirrors, crystal chandeliers, marquetry cabinets, writing bureaus,
@@ -191,7 +187,7 @@ function SeoContext() {
             Whether you are searching for a French Louis XV vitrine, an Anglo-Indian carved centre table,
             a Burmese rosewood chair, a Belgian cut-crystal chandelier or a colonial Bombay writing
             desk — you will find fewer, better things here than in any online catalogue.
-            Visit our Chor Bazaar showroom by appointment, or enquire on WhatsApp.
+            Visit our Mumbai showroom by appointment, or enquire on WhatsApp.
           </p>
         </div>
       </div>
@@ -202,11 +198,6 @@ function SeoContext() {
 function JournalPreview() {
   const posts = [
     {
-      slug: "chor-bazaar-antique-guide-mumbai",
-      title: "A Collector's Guide to Chor Bazaar",
-      excerpt: "How to walk Mutton Street like a dealer — what to look for, what to avoid, and why Mumbai's oldest antique district still matters.",
-    },
-    {
       slug: "how-to-authenticate-antique-furniture",
       title: "How to Authenticate an Antique",
       excerpt: "Patina, joinery, timber, hardware and provenance — the five things every buyer should examine before parting with money.",
@@ -215,6 +206,11 @@ function JournalPreview() {
       slug: "anglo-indian-furniture-history",
       title: "The Quiet Grandeur of Anglo-Indian Furniture",
       excerpt: "A short history of the furniture born from the meeting of European form and Indian craft — Bombay, Madras, and beyond.",
+    },
+    {
+      slug: "buying-antique-furniture-mumbai",
+      title: "Buying Antique Furniture in Mumbai",
+      excerpt: "A practical guide to sourcing, authenticating and living with antique furniture in one of India's most active collecting cities.",
     },
   ];
   return (
@@ -255,7 +251,7 @@ function JournalPreview() {
 
 const heroSlides = [
   { src: heroImg, alt: "Vinterior gallery interior with 19th-century console and gilt mirror" },
-  { src: showroomImg, alt: "Vinterior showroom in Chor Bazaar Mumbai — antique cabinet and chandelier" },
+  { src: showroomImg, alt: "Vinterior showroom in Mumbai — antique cabinet and chandelier" },
   { src: productVitrine.url, alt: "Louis XV marquetry vitrine at Vinterior Mumbai" },
   { src: productTable.url, alt: "Anglo-Indian carved centre table, Bombay c. 1880" },
   { src: productChair.url, alt: "Burmese rosewood chair and stool, 19th century" },
@@ -290,7 +286,7 @@ function Hero() {
       <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 md:px-12 md:pb-32">
         <div className="max-w-3xl">
           <p className="eyebrow text-ivory/80 fade-in-up" style={{ animationDelay: "200ms" }}>
-            <span className="hairline mr-4 bg-gold/80" /> Est. Mumbai · Chor Bazaar
+            <span className="hairline mr-4 bg-gold/80" /> Est. Mumbai · Since 1955
           </p>
           <h1
             className="mt-8 font-serif text-5xl leading-[1.05] text-ivory sm:text-6xl md:text-7xl lg:text-[5.5rem] fade-in-up"
@@ -418,55 +414,6 @@ function Arrivals() {
   );
 }
 
-function Story() {
-  return (
-    <section id="story" className="bg-ivory py-28 md:py-40">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-16 px-6 md:grid-cols-12 md:gap-20 md:px-12">
-        <div className="md:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden bg-warm-white">
-            <img
-              src={storyImg}
-              alt="Vinterior master craftsman restoring an antique wood carving in the Mumbai atelier"
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col justify-center md:col-span-6">
-          <p className="eyebrow">
-            <span className="hairline mr-3" />
-            Our Story
-          </p>
-          <h2 className="mt-6 font-serif text-4xl leading-[1.1] text-charcoal md:text-5xl lg:text-[3.25rem]">
-            A quiet gallery of things
-            <br />
-            <em className="italic font-normal">that outlive us.</em>
-          </h2>
-          <div className="mt-10 space-y-6 text-base font-light leading-relaxed text-muted-foreground md:text-[17px]">
-            <p>
-              Vinterior began on Mutton Street in Mumbai's Chor Bazaar — the oldest antique
-              district in India — with a single premise: that a room furnished with history
-              feels different from a room merely decorated.
-            </p>
-            <p>
-              For over two decades, our founders have travelled the estates of Europe, the
-              havelis of Rajasthan, the colonial homes of Goa and Bombay, and the ateliers of
-              old craftsmen still working in walnut, teak, brass and gilt. What returns to our
-              gallery has been authenticated, catalogued, and restored — never reimagined.
-            </p>
-            <p>
-              We are not a furniture store. We are a private gallery of heritage objects,
-              held in trust for the collectors who will one day pass them on.
-            </p>
-          </div>
-          <div className="mt-12">
-            <a href="#" className="btn-ghost">Read Our Story</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Pillars() {
   return (
@@ -530,7 +477,7 @@ function Showroom() {
           <address className="mt-10 not-italic font-serif text-lg leading-relaxed text-ivory/90">
             An Nasr, G-74 / 75 / 76, Mutton Street
             <br />
-            Chor Bazaar, Kumbharwada
+            Kumbharwada
             <br />
             Mumbai, Maharashtra 400008, India
           </address>
@@ -560,7 +507,7 @@ function Showroom() {
         <div className="overflow-hidden border border-ivory/15 bg-charcoal/40 shadow-2xl">
           <iframe
             title="Vinterior India — Mumbai showroom location on Google Maps"
-            src="https://maps.google.com/maps?q=Vinterior%20India%20Mutton%20Street%20Chor%20Bazaar%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Vinterior%20India%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="420"
             loading="lazy"
@@ -596,7 +543,7 @@ function Testimonials() {
     },
     {
       quote:
-        "My father collected Burmese teak all his life and I was nervous about walking into a Chor Bazaar shop alone. The team here was kind, didn't push anything, and even helped me identify a piece I already owned. Left with a beautiful old mirror and a lot more confidence. Genuine people.",
+        "My father collected Burmese teak all his life and I was nervous about walking into an antique shop alone. The team here was kind, didn't push anything, and even helped me identify a piece I already owned. Left with a beautiful old mirror and a lot more confidence. Genuine people.",
       name: "Priya Shetty",
       role: "Private Collector, Mumbai",
       initials: "PS",

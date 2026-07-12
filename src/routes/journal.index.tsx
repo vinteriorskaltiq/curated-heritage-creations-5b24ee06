@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { journalPosts } from "@/lib/journal";
 import logoAsset from "@/assets/vinterior-logo.asset.json";
 
-const title = "The Vinterior Journal — Notes on Antique Furniture, Restoration & Chor Bazaar";
+const title = "The Vinterior Journal — Notes on Antique Furniture, Restoration & Collecting";
 const description =
-  "Original writing from Vinterior on antique furniture, authentication, restoration, Chor Bazaar and the collecting of heritage décor in India.";
+  "Original writing from Vinterior on antique furniture, authentication, restoration, collecting and the heritage décor of India.";
 
 export const Route = createFileRoute("/journal/")({
   component: JournalIndex,
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/journal/")({
       {
         name: "keywords",
         content:
-          "Vinterior journal, antique furniture blog India, Chor Bazaar guide, how to authenticate antique furniture, Anglo-Indian furniture, colonial furniture India, antique restoration Mumbai",
+          "Vinterior journal, antique furniture blog India, how to authenticate antique furniture, Anglo-Indian furniture, colonial furniture India, antique restoration Mumbai",
       },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -80,7 +80,7 @@ function JournalIndex() {
           The Vinterior <em className="italic font-normal">Journal.</em>
         </h1>
         <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-muted-foreground">
-          Occasional writing on antique furniture, restoration, provenance, Chor Bazaar and the
+          Occasional writing on antique furniture, restoration, provenance and the
           quiet craft of collecting. Written from our gallery in Mumbai.
         </p>
       </section>
