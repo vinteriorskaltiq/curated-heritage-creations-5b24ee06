@@ -477,7 +477,7 @@ function Showroom() {
           <address className="mt-10 not-italic font-serif text-lg leading-relaxed text-ivory/90">
             An Nasr, G-74 / 75 / 76, Mutton Street
             <br />
-            Chor Bazaar, Kumbharwada
+            Kumbharwada
             <br />
             Mumbai, Maharashtra 400008, India
           </address>
