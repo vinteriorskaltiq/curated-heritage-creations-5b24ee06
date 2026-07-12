@@ -171,8 +171,7 @@ function SeoContext() {
         </h2>
         <div className="mt-8 space-y-5 text-[15px] font-light leading-[1.85] text-muted-foreground md:text-base">
           <p>
-            Vinterior is a private antique furniture gallery on Mutton Street in Chor Bazaar, Mumbai —
-            India's oldest and most storied antique district. For over two decades our family has
+            Vinterior is a private antique furniture gallery on Mutton Street in Mumbai. For over two decades our family has
             dealt in <strong className="font-medium text-charcoal">18th and 19th-century European antiques</strong>,
             <strong className="font-medium text-charcoal"> Anglo-Indian and colonial furniture</strong>,
             Burmese teak and rosewood, gilt mirrors, crystal chandeliers, marquetry cabinets, writing bureaus,
@@ -189,7 +188,7 @@ function SeoContext() {
             Whether you are searching for a French Louis XV vitrine, an Anglo-Indian carved centre table,
             a Burmese rosewood chair, a Belgian cut-crystal chandelier or a colonial Bombay writing
             desk — you will find fewer, better things here than in any online catalogue.
-            Visit our Chor Bazaar showroom by appointment, or enquire on WhatsApp.
+            Visit our Mumbai showroom by appointment, or enquire on WhatsApp.
           </p>
         </div>
       </div>
