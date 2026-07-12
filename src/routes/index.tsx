@@ -149,7 +149,7 @@ const pillars = [
 function Home() {
   return (
     <div className="bg-warm-white text-charcoal">
-      <SiteHeader overlay />
+      <SiteHeader />
       <Hero />
       <Arrivals />
       <Story />
