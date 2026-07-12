@@ -199,11 +199,6 @@ function SeoContext() {
 function JournalPreview() {
   const posts = [
     {
-      slug: "chor-bazaar-antique-guide-mumbai",
-      title: "A Collector's Guide to Chor Bazaar",
-      excerpt: "How to walk Mutton Street like a dealer — what to look for, what to avoid, and why Mumbai's oldest antique district still matters.",
-    },
-    {
       slug: "how-to-authenticate-antique-furniture",
       title: "How to Authenticate an Antique",
       excerpt: "Patina, joinery, timber, hardware and provenance — the five things every buyer should examine before parting with money.",
@@ -212,6 +207,11 @@ function JournalPreview() {
       slug: "anglo-indian-furniture-history",
       title: "The Quiet Grandeur of Anglo-Indian Furniture",
       excerpt: "A short history of the furniture born from the meeting of European form and Indian craft — Bombay, Madras, and beyond.",
+    },
+    {
+      slug: "buying-antique-furniture-mumbai",
+      title: "Buying Antique Furniture in Mumbai",
+      excerpt: "A practical guide to sourcing, authenticating and living with antique furniture in one of India's most active collecting cities.",
     },
   ];
   return (
