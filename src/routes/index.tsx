@@ -507,7 +507,7 @@ function Showroom() {
         <div className="overflow-hidden border border-ivory/15 bg-charcoal/40 shadow-2xl">
           <iframe
             title="Vinterior India — Mumbai showroom location on Google Maps"
-            src="https://maps.google.com/maps?q=Vinterior%20India%20Mutton%20Street%20Chor%20Bazaar%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Vinterior%20India%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="420"
             loading="lazy"
