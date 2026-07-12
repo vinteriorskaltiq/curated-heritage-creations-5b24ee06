@@ -209,13 +209,13 @@ function AboutPage() {
           <div className="md:col-span-5">
             <p className="eyebrow"><span className="hairline mr-3" /> Visit Our Gallery</p>
             <h2 className="mt-8 font-serif text-4xl leading-[1.1] md:text-5xl">
-              Vinterior, <em className="italic font-normal">Chor Bazaar.</em>
+              Vinterior, <em className="italic font-normal">Mumbai.</em>
             </h2>
             <address className="mt-10 not-italic font-serif text-xl leading-[1.6] text-charcoal/90">
               Vinterior<br />
               G-74 / G-75 / G-76<br />
               An Nasr, Sector 4, Mutton Street<br />
-              Chor Bazaar, Kumbharwada<br />
+              Kumbharwada<br />
               Mumbai 400008, Maharashtra, India
             </address>
             <div className="mt-10 space-y-2 text-sm text-charcoal/80">
