@@ -252,7 +252,7 @@ function JournalPreview() {
 
 const heroSlides = [
   { src: heroImg, alt: "Vinterior gallery interior with 19th-century console and gilt mirror" },
-  { src: showroomImg, alt: "Vinterior showroom in Chor Bazaar Mumbai — antique cabinet and chandelier" },
+  { src: showroomImg, alt: "Vinterior showroom in Mumbai — antique cabinet and chandelier" },
   { src: productVitrine.url, alt: "Louis XV marquetry vitrine at Vinterior Mumbai" },
   { src: productTable.url, alt: "Anglo-Indian carved centre table, Bombay c. 1880" },
   { src: productChair.url, alt: "Burmese rosewood chair and stool, 19th century" },
