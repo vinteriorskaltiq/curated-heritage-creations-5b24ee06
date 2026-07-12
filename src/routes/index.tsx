@@ -12,18 +12,16 @@ import productTable from "@/assets/product-table.asset.json";
 import productChair from "@/assets/product-chair.asset.json";
 
 const pageTitle =
-  "Vinterior — Antique Furniture Gallery in Mumbai | Chor Bazaar Heritage Décor";
+  "Vinterior — Antique Furniture Gallery in Mumbai | Heritage Décor";
 const pageDescription =
-  "Vinterior is a private antique furniture gallery on Mutton Street, Chor Bazaar, Mumbai. Authenticated 18th & 19th-century European, Anglo-Indian, colonial and vintage furniture, chandeliers, mirrors, cabinets and heritage décor — restored in-house for collectors, interior designers and heritage homes across India.";
+  "Vinterior is a private antique furniture gallery on Mutton Street, Mumbai. Authenticated 18th & 19th-century European, Anglo-Indian, colonial and vintage furniture, chandeliers, mirrors, cabinets and heritage décor — restored in-house for collectors, interior designers and heritage homes across India.";
 const pageKeywords = [
   "Vinterior",
   "Vinterior Mumbai",
-  "Vinterior Chor Bazaar",
   "Vinterior Furniture",
   "antique furniture Mumbai",
   "antique shop Mumbai",
   "antique dealers Mumbai",
-  "Chor Bazaar antiques",
   "Mutton Street Mumbai",
   "vintage furniture India",
   "colonial furniture Mumbai",
