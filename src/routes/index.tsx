@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { SiteHeader } from "@/components/site-chrome";
 
 
 import logoAsset from "@/assets/vinterior-logo.asset.json";
