@@ -287,7 +287,7 @@ function Hero() {
       <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 md:px-12 md:pb-32">
         <div className="max-w-3xl">
           <p className="eyebrow text-ivory/80 fade-in-up" style={{ animationDelay: "200ms" }}>
-            <span className="hairline mr-4 bg-gold/80" /> Est. Mumbai · Chor Bazaar
+            <span className="hairline mr-4 bg-gold/80" /> Est. Mumbai · Since 1955
           </p>
           <h1
             className="mt-8 font-serif text-5xl leading-[1.05] text-ivory sm:text-6xl md:text-7xl lg:text-[5.5rem] fade-in-up"
