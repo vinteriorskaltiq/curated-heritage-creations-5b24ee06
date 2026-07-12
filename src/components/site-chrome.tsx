@@ -217,7 +217,7 @@ export function SiteFooter() {
             <h4 className="eyebrow text-gold">Visit &amp; Contact</h4>
             <address className="mt-6 not-italic text-sm font-light leading-relaxed text-ivory/70">
               Vinterior — G-74 / G-75 / G-76<br />
-              An Nasr (Sector 4), Mutton Street, Chor Bazaar<br />
+              An Nasr (Sector 4), Mutton Street<br />
               Mumbai, Maharashtra 400008, India
             </address>
             <ul className="mt-4 space-y-1 text-sm text-ivory/85">
