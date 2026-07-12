@@ -41,13 +41,13 @@ import showroomImg from "@/assets/showroom.jpg";
 export const collections: CollectionPage[] = [
   {
     slug: "antique-furniture-mumbai",
-    eyebrow: "Mumbai · Chor Bazaar",
+    eyebrow: "Mumbai · Since 1955",
     title: "Antique Furniture in Mumbai",
-    h1: "Antique Furniture in Mumbai — Curated at Chor Bazaar Since 1955",
+    h1: "Antique Furniture in Mumbai — Curated Since 1955",
     metaTitle: "Antique Furniture Mumbai | Vinterior — Est. 1955",
     metaDescription:
-      "Authenticated antique furniture in Mumbai, curated by Vinterior at Chor Bazaar since 1955. Restored period, colonial & European pieces for collectors and designers.",
-    ogTitle: "Antique Furniture Mumbai — Vinterior at Chor Bazaar",
+      "Authenticated antique furniture in Mumbai, curated by Vinterior since 1955. Restored period, colonial & European pieces for collectors and designers.",
+    ogTitle: "Antique Furniture Mumbai — Vinterior",
     ogDescription:
       "Third-generation family gallery of authenticated antique furniture in Mumbai. Restored in-house, sold with written provenance.",
     targetKeyword: "Antique Furniture Mumbai",
@@ -55,14 +55,13 @@ export const collections: CollectionPage[] = [
       "antique furniture Mumbai",
       "antique furniture store Mumbai",
       "antique dealers Mumbai",
-      "Chor Bazaar antique furniture",
       "Vinterior Mumbai",
       "period furniture Mumbai",
       "vintage furniture Mumbai",
     ],
-    hero: { image: showroomImg, alt: "Vinterior antique furniture showroom, Chor Bazaar, Mumbai" },
+    hero: { image: showroomImg, alt: "Vinterior antique furniture showroom in Mumbai" },
     intro:
-      "For nearly seven decades, Vinterior has been one of Mumbai's most trusted addresses for authenticated antique furniture. Founded in 1955 and now run by the third generation of the same family, our gallery on Mutton Street, Chor Bazaar sources, restores and curates period pieces for collectors, interior designers, heritage residences and hospitality projects across India.",
+      "For nearly seven decades, Vinterior has been one of Mumbai's most trusted addresses for authenticated antique furniture. Founded in 1955 and now run by the third generation of the same family, our gallery on Mutton Street sources, restores and curates period pieces for collectors, interior designers, heritage residences and hospitality projects across India.",
     body: [
       {
         h: "Why collectors choose Vinterior",
@@ -86,13 +85,13 @@ export const collections: CollectionPage[] = [
       },
       {
         h: "Visit the Mumbai gallery",
-        p: "The gallery is at G-74 / G-75 / G-76, An Nasr, Mutton Street, Chor Bazaar, Mumbai 400008. Weekday mornings are quietest and most rewarding. Appointments are welcomed but not required; a WhatsApp message before you arrive means we can set aside time.",
+        p: "The gallery is at G-74 / G-75 / G-76, An Nasr, Mutton Street, Mumbai 400008. Weekday mornings are quietest and most rewarding. Appointments are welcomed but not required; a WhatsApp message before you arrive means we can set aside time.",
       },
     ],
     faqs: [
       {
         q: "Where is Vinterior located in Mumbai?",
-        a: "Vinterior is at G-74 / G-75 / G-76, An Nasr, Mutton Street, Chor Bazaar, Kumbharwada, Mumbai 400008 — the heart of Mumbai's antique district.",
+        a: "Vinterior is at G-74 / G-75 / G-76, An Nasr, Mutton Street, Kumbharwada, Mumbai 400008.",
       },
       {
         q: "Are your antiques authenticated?",
