@@ -73,7 +73,7 @@ export const Route = createFileRoute("/collections/$slug")({
             telephone: "+91-98206-49649",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "G-74 / G-75 / G-76, An Nasr, Mutton Street, Chor Bazaar",
+              streetAddress: "G-74 / G-75 / G-76, An Nasr, Mutton Street",
               addressLocality: "Mumbai",
               postalCode: "400008",
               addressCountry: "IN",
