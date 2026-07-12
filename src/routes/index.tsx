@@ -150,7 +150,6 @@ function Home() {
       <SiteHeader />
       <Hero />
       <Arrivals />
-      <Story />
       <Pillars />
       <Showroom />
       <Testimonials />
