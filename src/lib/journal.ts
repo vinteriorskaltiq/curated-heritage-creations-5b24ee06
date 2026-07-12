@@ -11,41 +11,44 @@ export interface JournalPost {
 
 export const journalPosts: JournalPost[] = [
   {
-    slug: "chor-bazaar-antique-guide-mumbai",
-    title: "A Collector's Guide to Chor Bazaar, Mumbai",
+    slug: "buying-antique-furniture-mumbai",
+    title: "Buying Antique Furniture in Mumbai — A Collector's Guide",
     description:
-      "How to walk Mutton Street like a dealer — a practical guide to buying antique furniture in Chor Bazaar, India's oldest antique district.",
+      "A practical guide to sourcing, authenticating and living with antique furniture in Mumbai — written for collectors, designers and first-time buyers.",
     excerpt:
-      "How to walk Mutton Street like a dealer — what to look for, what to avoid, and why Mumbai's oldest antique district still matters to serious collectors.",
+      "What to look for, what to avoid, and how to buy antique furniture in Mumbai with confidence — from a third-generation family gallery.",
     date: "2025-11-14",
     readMinutes: 7,
     keywords: [
-      "Chor Bazaar",
-      "Chor Bazaar Mumbai",
-      "Mutton Street",
       "antique furniture Mumbai",
-      "antique shopping Mumbai",
-      "Vinterior Chor Bazaar",
+      "buy antique furniture Mumbai",
+      "antique furniture India",
+      "Mutton Street Mumbai",
+      "Vinterior Mumbai",
     ],
     body: [
       {
-        p: "Chor Bazaar — literally 'thieves' market' — is the oldest antique district in India. It runs along Mutton Street in south Mumbai, a five-minute walk from the Jama Masjid and a fifteen-minute rickshaw from Chhatrapati Shivaji Maharaj Terminus. For nearly a hundred and fifty years it has been the place where families discreetly sold their heirlooms, where colonial estates were unwound, and where a serious buyer could, with patience, find things that no other market in the country carried.",
+        p: "Mumbai remains one of the most active markets in India for genuine antique furniture. For nearly a century, the city has absorbed colonial estates, merchant families, Parsi households and palace clearances — and the best pieces from those dispersals still surface in quiet galleries, family sales and the hands of specialist dealers. The question for a new buyer is not where to look, but how to look.",
       },
       {
-        h: "Come on a weekday, come early",
-        p: "The best pieces move on weekday mornings, before ten. Weekends bring foot traffic, group tours, and reproduction sellers who set up alongside genuine dealers. If you want to see the district as dealers see it, come Monday to Thursday between 9 and 11 AM. Wear closed shoes — some lanes are still cobbled — and expect to walk.",
+        h: "Start with the timber",
+        p: "A piece's wood should match its story. Anglo-Indian furniture from the 19th century is teak, rosewood, ebony or satinwood — never mahogany or particle board. French provincial pieces are walnut, cherry or oak. If the timber does not match the claimed origin, one of the two is wrong. Turn the piece over; look at drawer sides, the underside of the top and the back panels. These surfaces are rarely faked.",
       },
       {
-        h: "Learn to tell the difference",
-        p: "Chor Bazaar today sells three things: authentic antiques, restored antiques, and reproductions. All three have a place. The problem is that the third is often sold as the first. A rule of thumb: if a 19th-century teak sideboard is priced like new furniture, it isn't 19th century. Genuine antiques carry the weight of their material, oxidised hardware, uneven old joinery, and — above all — patina that cannot be faked without destroying the piece.",
+        h: "Read the joinery",
+        p: "Hand-cut dovetails are irregular, slightly uneven, and clearly made by eye. Machine-cut dovetails are uniform and precise — a red flag on a piece claimed to be 1850. Pegged mortise-and-tenon joints, hand-planed backs and visible tool marks are all signs of genuine hand work. Perfection is suspicious.",
       },
       {
-        h: "What Chor Bazaar does best",
-        p: "The district's strength is Anglo-Indian and colonial furniture from the Bombay Presidency — carved teak and rosewood, campaign chests, planter's chairs, writing bureaus, four-poster beds, and the occasional ecclesiastical piece from Goa. European imports arrive too — French vitrines, Belgian chandeliers, English silver — usually through estate clearances rather than fresh shipments.",
+        h: "Patina cannot be sprayed",
+        p: "Patina is the surface a piece has developed from being touched, cleaned and lit by daylight over a century or more. It is uneven — darker where hands rest, lighter where dust has been wiped. A uniformly aged 'antique' finish, especially across horizontal surfaces, is nearly always applied in a workshop. Real patina has depth; fake patina has consistency.",
       },
       {
-        h: "Where Vinterior fits in",
-        p: "Vinterior sits at G-74 / G-75 / G-76 on Mutton Street. We have kept the same three shopfronts for over two decades. Our practice is simple: we buy fewer things, we authenticate every one, and we restore them by hand in our own atelier rather than sending them out. If you would like a private walk of the district with someone who has spent thirty years in it, we are happy to arrange one — write to us on WhatsApp before your visit.",
+        h: "Ask for provenance",
+        p: "The single most valuable thing a dealer can give you is a written note of where the piece came from, when it was acquired, and what has been done to it. Vinterior issues a signed statement of provenance with every acquisition. If a seller cannot tell you where a piece was before them, treat the price accordingly.",
+      },
+      {
+        h: "Visit by appointment",
+        p: "Serious galleries keep irregular hours and stock changes constantly. A WhatsApp message before visiting means the right person is available to walk you through the pieces, answer questions, and set aside time. Weekday mornings are usually the quietest and most rewarding.",
       },
     ],
   },
