@@ -115,47 +115,6 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* OUR STORY */}
-      <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-12 md:py-40">
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-20">
-          <div className="md:col-span-5">
-            <p className="eyebrow"><span className="hairline mr-3" /> Our Story</p>
-            <h2 className="mt-8 font-serif text-4xl leading-[1.1] md:text-5xl">
-              Three generations of quiet curation.
-            </h2>
-            <div className="mt-10 overflow-hidden">
-              <img
-                src={storyImg}
-                alt="Vinterior atelier — master craftsman restoring antique furniture in Mumbai"
-                className="h-[420px] w-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-6 md:col-start-7 md:pt-16">
-            <div className="space-y-6 font-serif text-[19px] leading-[1.7] text-charcoal/90 md:text-[20px]">
-              <p>
-                Vinterior is a third-generation family enterprise founded in 1955, carrying forward
-                a legacy of craftsmanship, curation and timeless design built over generations.
-              </p>
-              <p>
-                Established by our grandfather, Vinterior has become one of Mumbai's most trusted
-                destinations for collectors, architects, interior designers, luxury residences,
-                hospitality projects and homeowners seeking authentic antique furniture and rare
-                decorative pieces.
-              </p>
-              <p>
-                For over seven decades we have specialised in sourcing, restoring and curating
-                exceptional antiques that preserve history while complementing contemporary interiors.
-              </p>
-              <p>
-                Every piece is selected for its authenticity, craftsmanship, historical significance
-                and enduring value.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* EXPERTISE */}
       <section className="border-t border-charcoal/10 bg-ivory py-28 md:py-36">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
