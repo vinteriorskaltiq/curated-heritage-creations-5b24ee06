@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { SiteHeader } from "@/components/site-chrome";
 
 
 import logoAsset from "@/assets/vinterior-logo.asset.json";
@@ -148,7 +149,7 @@ const pillars = [
 function Home() {
   return (
     <div className="bg-warm-white text-charcoal">
-      <Nav />
+      <SiteHeader />
       <Hero />
       <Arrivals />
       <Story />
@@ -251,73 +252,6 @@ function JournalPreview() {
   );
 }
 
-
-function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-warm-white/95 backdrop-blur-sm border-b border-border py-4"
-          : "bg-transparent py-6"
-      }`}
-    >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-12">
-        <a href="#" className="flex items-center gap-3">
-          <img
-            src={logoAsset.url}
-            alt="Vinterior"
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-full object-cover"
-          />
-          <span className="hidden font-serif text-xl tracking-wide text-charcoal sm:block">
-            Vinterior
-          </span>
-        </a>
-
-        <nav className="hidden items-center gap-10 text-xs font-medium uppercase tracking-[0.22em] text-charcoal/80 lg:flex">
-          <a href="#arrivals" className="hover:text-charcoal">Pieces</a>
-          <Link to="/collections" className="hover:text-charcoal">Collections</Link>
-          <Link to="/about" className="hover:text-charcoal">About</Link>
-          <Link to="/journal" className="hover:text-charcoal">Journal</Link>
-          <a href="#showroom" className="hover:text-charcoal">Showroom</a>
-        </nav>
-
-        <div className="hidden items-center gap-6 md:flex">
-          <a
-            href="https://www.instagram.com/vinteriorstoreindia/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Vinterior on Instagram"
-            className="text-charcoal/70 hover:text-charcoal transition-colors"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
-            </svg>
-          </a>
-          <a
-            href="https://wa.me/919820649649"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs font-medium uppercase tracking-[0.22em] text-charcoal border-b border-charcoal/40 pb-1 hover:border-charcoal"
-          >
-            Enquire
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 const heroSlides = [
   { src: heroImg, alt: "Vinterior gallery interior with 19th-century console and gilt mirror" },
