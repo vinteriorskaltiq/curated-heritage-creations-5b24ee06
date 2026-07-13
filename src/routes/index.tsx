@@ -252,12 +252,10 @@ function JournalPreview() {
 
 
 const heroSlides = [
-  { src: heroImg, alt: "Vinterior gallery interior with 19th-century console and gilt mirror" },
-  { src: showroomImg, alt: "Vinterior showroom in Mumbai — antique cabinet and chandelier" },
-  { src: productVitrine.url, alt: "Louis XV marquetry vitrine at Vinterior Mumbai" },
-  { src: productTable.url, alt: "Anglo-Indian carved centre table, Bombay c. 1880" },
-  { src: productChair.url, alt: "Burmese rosewood chair and stool, 19th century" },
-  { src: storyImg, alt: "Master craftsman restoring an antique in the Vinterior atelier" },
+  { src: showroomVitrines.url, alt: "Vinterior gallery — European vitrines and antique cabinets in the Mumbai showroom" },
+  { src: showroomSeating.url, alt: "Vinterior showroom — carved seating, Anglo-Indian chairs and vitrines" },
+  { src: showroomMirror.url, alt: "Vinterior gallery — antique dressing mirror, vintage weighing scale and heritage cabinet" },
+  { src: showroomCarved.url, alt: "Vinterior showroom — carved cabinets, colonial chairs and heritage collectibles" },
 ];
 
 function Hero() {
