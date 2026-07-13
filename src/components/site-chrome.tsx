@@ -59,9 +59,17 @@ export function SiteHeader() {
               alt="Vinterior"
               width={44}
               height={44}
-              className="h-11 w-11 rounded-full object-cover ring-1 ring-charcoal/10 transition-transform duration-500 group-hover:scale-105"
+              className={`h-11 w-11 rounded-full object-cover ring-1 transition-all duration-500 group-hover:scale-105 ${
+                scrolled ? "ring-charcoal/10" : "ring-white/60 shadow-[0_2px_16px_rgba(0,0,0,0.25)]"
+              }`}
             />
-            <span className="hidden font-serif text-xl tracking-wide text-charcoal sm:block">
+            <span
+              className={`hidden font-serif text-xl tracking-wide sm:block transition-colors duration-500 ${
+                scrolled
+                  ? "text-charcoal"
+                  : "text-ivory [text-shadow:0_1px_14px_rgba(0,0,0,0.55),0_1px_2px_rgba(0,0,0,0.35)]"
+              }`}
+            >
               Vinterior
             </span>
           </Link>
