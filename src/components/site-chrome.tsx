@@ -230,6 +230,7 @@ export function SiteFooter() {
             </address>
             <ul className="mt-4 space-y-1 text-sm text-ivory/85">
               <li><a href="tel:+919820649649" className="hover:text-gold">+91 98206 49649</a></li>
+              <li><a href="mailto:info@vinteriorstore.in" className="hover:text-gold">info@vinteriorstore.in</a></li>
               <li>
                 <a href="https://wa.me/919820649649" target="_blank" rel="noreferrer" className="hover:text-gold">
                   WhatsApp
