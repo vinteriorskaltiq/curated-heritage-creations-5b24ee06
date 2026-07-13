@@ -641,9 +641,9 @@ function Testimonials() {
                   {t.initials}
                 </span>
                 <div>
-                  <p className="font-serif text-base text-charcoal">{t.name}</p>
+                  <p className="font-serif text-base text-charcoal">{t.role}</p>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                    {t.role} · {t.when}
+                    Verified visitor · {t.when}
                   </p>
                 </div>
               </figcaption>
