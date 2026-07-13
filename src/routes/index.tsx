@@ -415,7 +415,9 @@ function Arrivals() {
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
+                  className={`h-full w-full transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03] ${
+                    p.fit === "cover" ? "object-cover" : "object-contain"
+                  }`}
                 />
               </div>
               <div className="mt-6">
