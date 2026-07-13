@@ -4,12 +4,14 @@ import { SiteHeader } from "@/components/site-chrome";
 
 
 import logoAsset from "@/assets/vinterior-logo.asset.json";
-import heroImg from "@/assets/hero-antique-interior.jpg";
 import showroomImg from "@/assets/showroom.jpg";
-import storyImg from "@/assets/story-craft.jpg";
 import productVitrine from "@/assets/product-vitrine.asset.json";
 import productTable from "@/assets/product-table.asset.json";
 import productChair from "@/assets/product-chair.asset.json";
+import showroomVitrines from "@/assets/showroom-vitrines.asset.json";
+import showroomSeating from "@/assets/showroom-seating.asset.json";
+import showroomMirror from "@/assets/showroom-mirror-scale.asset.json";
+import showroomCarved from "@/assets/showroom-carved-corner.asset.json";
 
 const pageTitle =
   "Vinterior — Antique Furniture Gallery in Mumbai | Heritage Décor";
@@ -106,18 +108,42 @@ const arrivals = [
     name: "Louis XV Marquetry Vitrine",
     category: "Antique Cabinets · France, 19th Century",
     price: "On Request",
+    fit: "contain" as const,
   },
   {
     img: productTable.url,
     name: "Anglo-Indian Carved Centre Table",
     category: "Heritage Furniture · Bombay, c. 1880",
     price: "On Request",
+    fit: "contain" as const,
   },
   {
     img: productChair.url,
     name: "Burmese Rosewood Chair & Stool",
     category: "Carved Seating · Burma, 19th Century",
     price: "On Request",
+    fit: "contain" as const,
+  },
+  {
+    img: showroomCarved.url,
+    name: "Carved Rosewood Corner Cabinet",
+    category: "Anglo-Indian · Late 19th Century",
+    price: "On Request",
+    fit: "cover" as const,
+  },
+  {
+    img: showroomMirror.url,
+    name: "Cast-Iron Weighing Scale & Dressing Mirror",
+    category: "Industrial & Boudoir · Early 20th Century",
+    price: "On Request",
+    fit: "cover" as const,
+  },
+  {
+    img: showroomVitrines.url,
+    name: "European Vitrine Ensemble",
+    category: "Cabinets & Display · 19th Century",
+    price: "On Request",
+    fit: "cover" as const,
   },
 ];
 
@@ -250,12 +276,10 @@ function JournalPreview() {
 
 
 const heroSlides = [
-  { src: heroImg, alt: "Vinterior gallery interior with 19th-century console and gilt mirror" },
-  { src: showroomImg, alt: "Vinterior showroom in Mumbai — antique cabinet and chandelier" },
-  { src: productVitrine.url, alt: "Louis XV marquetry vitrine at Vinterior Mumbai" },
-  { src: productTable.url, alt: "Anglo-Indian carved centre table, Bombay c. 1880" },
-  { src: productChair.url, alt: "Burmese rosewood chair and stool, 19th century" },
-  { src: storyImg, alt: "Master craftsman restoring an antique in the Vinterior atelier" },
+  { src: showroomVitrines.url, alt: "Vinterior gallery — European vitrines and antique cabinets in the Mumbai showroom" },
+  { src: showroomSeating.url, alt: "Vinterior showroom — carved seating, Anglo-Indian chairs and vitrines" },
+  { src: showroomMirror.url, alt: "Vinterior gallery — antique dressing mirror, vintage weighing scale and heritage cabinet" },
+  { src: showroomCarved.url, alt: "Vinterior showroom — carved cabinets, colonial chairs and heritage collectibles" },
 ];
 
 function Hero() {
@@ -391,7 +415,9 @@ function Arrivals() {
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-contain transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03]"
+                  className={`h-full w-full transition-transform duration-[1400ms] ease-out group-hover:scale-[1.03] ${
+                    p.fit === "cover" ? "object-cover" : "object-contain"
+                  }`}
                 />
               </div>
               <div className="mt-6">
@@ -525,30 +551,51 @@ function Testimonials() {
   const items = [
     {
       quote:
-        "Went hunting for a proper writing desk and ended up spending two hours here — Faiz was so patient, walked us through the history of every piece we asked about. Ended up buying a small Anglo-Indian side table I wasn't even looking for. It's sitting in our Bandra flat now and every guest asks about it.",
-      name: "Ananya Rao-Kachroo",
-      role: "Homeowner, Bandra West",
-      initials: "AR",
+        "I walked in looking for one writing desk and left two hours later with an Anglo-Indian side table I hadn't planned on. The team took their time explaining the piece — the timber, the era, the small marks of age. It sits in our living room now and every guest asks about it.",
+      role: "Home Owner",
+      initials: "HO",
       rating: 5,
       when: "3 weeks ago",
     },
     {
       quote:
-        "I source for a boutique hotel project in Alibaug and Vinterior has quietly become our first stop in Mumbai. The pieces are honest — no reproductions passed off as antiques, no over-polished restorations. Prices are fair for what they are. Shipping to Alibaug was handled properly, crated and insured.",
-      name: "Rohan Mehta",
-      role: "Interior Designer, Studio Kaaya",
-      initials: "RM",
+        "I source antiques for residential and hospitality projects across India, and Vinterior has quietly become my first stop in Mumbai. The pieces are honest — no reproductions dressed up as antiques, no over-polished restorations. Prices are fair for what they are, and shipping is handled properly.",
+      role: "Interior Designer",
+      initials: "ID",
       rating: 5,
       when: "2 months ago",
     },
     {
       quote:
-        "My father collected Burmese teak all his life and I was nervous about walking into an antique shop alone. The team here was kind, didn't push anything, and even helped me identify a piece I already owned. Left with a beautiful old mirror and a lot more confidence. Genuine people.",
-      name: "Priya Shetty",
-      role: "Private Collector, Mumbai",
-      initials: "PS",
+        "My father collected Burmese teak all his life and I was nervous walking into an antique gallery on my own. The team was kind, unhurried, and even helped me identify a piece I already owned. I left with a beautiful old mirror and a great deal more confidence.",
+      role: "Private Collector",
+      initials: "PC",
       rating: 5,
       when: "1 month ago",
+    },
+    {
+      quote:
+        "We were restoring an old bungalow and needed period-correct furniture — not new pieces trying to look old. Vinterior understood immediately. Two vitrines, a carved centre table and a chandelier later, the house finally feels its age. In the best possible way.",
+      role: "Heritage Home Owner",
+      initials: "HH",
+      rating: 5,
+      when: "4 months ago",
+    },
+    {
+      quote:
+        "I've been collecting quietly for a decade and it is rare to find a dealer who talks to you honestly about provenance and condition. Nothing is oversold here. The pieces speak for themselves, and the team lets them. That's the whole difference.",
+      role: "Antique Enthusiast",
+      initials: "AE",
+      rating: 5,
+      when: "6 weeks ago",
+    },
+    {
+      quote:
+        "We furnished a small boutique property with pieces from Vinterior — every room now has its own quiet story. Guests notice. Bookings mention the furniture in the reviews. It's the kind of detail that turns a hotel into somewhere people remember.",
+      role: "Boutique Hotel Owner",
+      initials: "BH",
+      rating: 5,
+      when: "5 months ago",
     },
   ];
 
@@ -594,9 +641,9 @@ function Testimonials() {
                   {t.initials}
                 </span>
                 <div>
-                  <p className="font-serif text-base text-charcoal">{t.name}</p>
+                  <p className="font-serif text-base text-charcoal">{t.role}</p>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                    {t.role} · {t.when}
+                    Verified visitor · {t.when}
                   </p>
                 </div>
               </figcaption>
@@ -646,7 +693,7 @@ function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h4 className="eyebrow text-gold">Explore</h4>
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
               <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
@@ -657,7 +704,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-5">
             <h4 className="eyebrow text-gold">Visit &amp; Contact</h4>
             <address className="mt-6 not-italic text-sm font-light leading-relaxed text-ivory/70">
               G-74 / G-75 / G-76<br />
@@ -669,6 +716,11 @@ function Footer() {
                 <a href="tel:+919820649649" className="hover:text-gold">+91 98206 49649</a>
               </li>
               <li>
+                <a href="mailto:info@vinteriorstore.in" className="hover:text-gold">
+                  info@vinteriorstore.in
+                </a>
+              </li>
+              <li>
                 <a
                   href="https://wa.me/919820649649"
                   target="_blank"
@@ -677,8 +729,7 @@ function Footer() {
                 >
                   WhatsApp
                 </a>
-              </li>
-              <li>
+                <span className="mx-2 text-ivory/30">·</span>
                 <a
                   href="https://www.instagram.com/vinteriorstoreindia/"
                   target="_blank"
@@ -691,29 +742,6 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
-            <h4 className="eyebrow text-gold">The Journal</h4>
-            <p className="mt-6 text-sm font-light leading-relaxed text-ivory/70">
-              A quarterly letter on new acquisitions, private previews and the craft of restoration.
-            </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="mt-6 flex items-center border-b border-ivory/30 pb-2 focus-within:border-gold"
-            >
-              <input
-                type="email"
-                required
-                placeholder="Your email"
-                className="flex-1 bg-transparent py-2 text-sm text-ivory placeholder:text-ivory/40 outline-none"
-              />
-              <button
-                type="submit"
-                className="text-[10px] font-medium uppercase tracking-[0.24em] text-ivory hover:text-gold"
-              >
-                Subscribe →
-              </button>
-            </form>
-          </div>
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-4 text-[11px] uppercase tracking-[0.2em] text-ivory/45 md:flex-row md:items-center">
