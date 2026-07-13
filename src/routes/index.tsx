@@ -693,7 +693,7 @@ function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h4 className="eyebrow text-gold">Explore</h4>
             <ul className="mt-6 space-y-4 font-serif text-lg text-ivory/85">
               <li><a href="#arrivals" className="hover:text-gold">Pieces</a></li>
@@ -704,7 +704,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-5">
             <h4 className="eyebrow text-gold">Visit &amp; Contact</h4>
             <address className="mt-6 not-italic text-sm font-light leading-relaxed text-ivory/70">
               G-74 / G-75 / G-76<br />
@@ -716,6 +716,11 @@ function Footer() {
                 <a href="tel:+919820649649" className="hover:text-gold">+91 98206 49649</a>
               </li>
               <li>
+                <a href="mailto:info@vinteriorstore.in" className="hover:text-gold">
+                  info@vinteriorstore.in
+                </a>
+              </li>
+              <li>
                 <a
                   href="https://wa.me/919820649649"
                   target="_blank"
@@ -724,8 +729,7 @@ function Footer() {
                 >
                   WhatsApp
                 </a>
-              </li>
-              <li>
+                <span className="mx-2 text-ivory/30">·</span>
                 <a
                   href="https://www.instagram.com/vinteriorstoreindia/"
                   target="_blank"
@@ -738,29 +742,6 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
-            <h4 className="eyebrow text-gold">The Journal</h4>
-            <p className="mt-6 text-sm font-light leading-relaxed text-ivory/70">
-              A quarterly letter on new acquisitions, private previews and the craft of restoration.
-            </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="mt-6 flex items-center border-b border-ivory/30 pb-2 focus-within:border-gold"
-            >
-              <input
-                type="email"
-                required
-                placeholder="Your email"
-                className="flex-1 bg-transparent py-2 text-sm text-ivory placeholder:text-ivory/40 outline-none"
-              />
-              <button
-                type="submit"
-                className="text-[10px] font-medium uppercase tracking-[0.24em] text-ivory hover:text-gold"
-              >
-                Subscribe →
-              </button>
-            </form>
-          </div>
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-4 text-[11px] uppercase tracking-[0.2em] text-ivory/45 md:flex-row md:items-center">
