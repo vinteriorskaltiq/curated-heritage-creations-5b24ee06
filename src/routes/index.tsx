@@ -108,18 +108,42 @@ const arrivals = [
     name: "Louis XV Marquetry Vitrine",
     category: "Antique Cabinets · France, 19th Century",
     price: "On Request",
+    fit: "contain" as const,
   },
   {
     img: productTable.url,
     name: "Anglo-Indian Carved Centre Table",
     category: "Heritage Furniture · Bombay, c. 1880",
     price: "On Request",
+    fit: "contain" as const,
   },
   {
     img: productChair.url,
     name: "Burmese Rosewood Chair & Stool",
     category: "Carved Seating · Burma, 19th Century",
     price: "On Request",
+    fit: "contain" as const,
+  },
+  {
+    img: showroomCarved.url,
+    name: "Carved Rosewood Corner Cabinet",
+    category: "Anglo-Indian · Late 19th Century",
+    price: "On Request",
+    fit: "cover" as const,
+  },
+  {
+    img: showroomMirror.url,
+    name: "Cast-Iron Weighing Scale & Dressing Mirror",
+    category: "Industrial & Boudoir · Early 20th Century",
+    price: "On Request",
+    fit: "cover" as const,
+  },
+  {
+    img: showroomVitrines.url,
+    name: "European Vitrine Ensemble",
+    category: "Cabinets & Display · 19th Century",
+    price: "On Request",
+    fit: "cover" as const,
   },
 ];
 
