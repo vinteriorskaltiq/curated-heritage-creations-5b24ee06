@@ -552,57 +552,66 @@ function Testimonials() {
     {
       quote:
         "I walked in looking for one writing desk and left two hours later with an Anglo-Indian side table I hadn't planned on. The team took their time explaining the piece — the timber, the era, the small marks of age. It sits in our living room now and every guest asks about it.",
-      role: "Home Owner",
-      initials: "HO",
+      city: "Mumbai",
+      initials: "MU",
       rating: 5,
-      when: "3 weeks ago",
     },
     {
       quote:
-        "I source antiques for residential and hospitality projects across India, and Vinterior has quietly become my first stop in Mumbai. The pieces are honest — no reproductions dressed up as antiques, no over-polished restorations. Prices are fair for what they are, and shipping is handled properly.",
-      role: "Interior Designer",
-      initials: "ID",
+        "I source antiques for residential and hospitality projects across India, and Vinterior has quietly become my first stop. The pieces are honest — no reproductions dressed up as antiques, no over-polished restorations. Prices are fair and shipping is handled properly.",
+      city: "New Delhi",
+      initials: "ND",
       rating: 5,
-      when: "2 months ago",
     },
     {
       quote:
         "My father collected Burmese teak all his life and I was nervous walking into an antique gallery on my own. The team was kind, unhurried, and even helped me identify a piece I already owned. I left with a beautiful old mirror and a great deal more confidence.",
-      role: "Private Collector",
-      initials: "PC",
+      city: "Bengaluru",
+      initials: "BE",
       rating: 5,
-      when: "1 month ago",
     },
     {
       quote:
         "We were restoring an old bungalow and needed period-correct furniture — not new pieces trying to look old. Vinterior understood immediately. Two vitrines, a carved centre table and a chandelier later, the house finally feels its age. In the best possible way.",
-      role: "Heritage Home Owner",
-      initials: "HH",
+      city: "Goa",
+      initials: "GO",
       rating: 5,
-      when: "4 months ago",
     },
     {
       quote:
         "I've been collecting quietly for a decade and it is rare to find a dealer who talks to you honestly about provenance and condition. Nothing is oversold here. The pieces speak for themselves, and the team lets them. That's the whole difference.",
-      role: "Antique Enthusiast",
-      initials: "AE",
+      city: "Hyderabad",
+      initials: "HY",
       rating: 5,
-      when: "6 weeks ago",
     },
     {
       quote:
         "We furnished a small boutique property with pieces from Vinterior — every room now has its own quiet story. Guests notice. Bookings mention the furniture in the reviews. It's the kind of detail that turns a hotel into somewhere people remember.",
-      role: "Boutique Hotel Owner",
-      initials: "BH",
+      city: "Udaipur",
+      initials: "UD",
       rating: 5,
-      when: "5 months ago",
+    },
+    {
+      quote:
+        "Shipped a French vitrine and a pair of colonial chairs to London — crated beautifully, arrived without a scratch. Communication throughout was gentle and precise. A rare experience in this trade.",
+      city: "London",
+      initials: "LN",
+      rating: 5,
+    },
+    {
+      quote:
+        "As an architect I've been recommending Vinterior to clients across the country. The gallery has that increasingly rare thing — a point of view. You leave with a piece that means something, not just something that fills a corner.",
+      city: "Chennai",
+      initials: "CH",
+      rating: 5,
     },
   ];
 
   const swatches = ["bg-bronze/15 text-bronze", "bg-charcoal/10 text-charcoal", "bg-gold/20 text-charcoal"];
+  const loop = [...items, ...items];
 
   return (
-    <section className="bg-ivory py-28 md:py-40">
+    <section className="bg-ivory py-28 md:py-40 overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <SectionHeader
           eyebrow="In Their Words"
@@ -616,55 +625,70 @@ function Testimonials() {
           align="center"
           intro="Unedited words from designers, homeowners and collectors who have spent an afternoon with us on Mutton Street."
         />
+      </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {items.map((t, i) => (
+      <div
+        className="relative mt-20 group"
+        style={{
+          maskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
+        }}
+      >
+        <div className="flex w-max gap-6 md:gap-8 [animation:testimonial-marquee_90s_linear_infinite] group-hover:[animation-play-state:paused]">
+          {loop.map((t, i) => (
             <figure
               key={i}
-              className="flex h-full flex-col border border-charcoal/10 bg-warm-white p-8 shadow-sm md:p-10"
+              className="flex h-full w-[320px] shrink-0 flex-col border border-charcoal/10 bg-warm-white p-7 shadow-sm md:w-[380px] md:p-8"
             >
               <div className="flex items-center gap-1 text-gold" aria-label={`${t.rating} out of 5 stars`}>
                 {Array.from({ length: t.rating }).map((_, s) => (
-                  <svg key={s} width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg key={s} width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M10 1.5l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.8l6-.7L10 1.5z" />
                   </svg>
                 ))}
               </div>
-              <blockquote className="mt-6 flex-1 font-serif text-lg italic leading-[1.55] text-charcoal md:text-[19px]">
+              <blockquote className="mt-5 flex-1 font-serif text-[16px] italic leading-[1.55] text-charcoal md:text-[17px]">
                 “{t.quote}”
               </blockquote>
-              <figcaption className="mt-8 flex items-center gap-4 border-t border-charcoal/10 pt-6">
+              <figcaption className="mt-6 flex items-center gap-4 border-t border-charcoal/10 pt-5">
                 <span
-                  className={`flex h-11 w-11 items-center justify-center rounded-full font-serif text-sm ${swatches[i % swatches.length]}`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full font-serif text-sm ${swatches[i % swatches.length]}`}
                   aria-hidden="true"
                 >
                   {t.initials}
                 </span>
                 <div>
-                  <p className="font-serif text-base text-charcoal">{t.role}</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                    Verified visitor · {t.when}
+                  <p className="font-serif text-[15px] text-charcoal">{t.city}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                    India · Google Review
                   </p>
                 </div>
               </figcaption>
             </figure>
           ))}
         </div>
-
-        <div className="mt-16 flex flex-col items-center justify-center gap-4 text-center">
-          <p className="text-sm font-light text-muted-foreground">
-            Rated <span className="font-serif text-charcoal">5.0</span> on Google · Reviewed by clients across Mumbai, Delhi, Goa &amp; London
-          </p>
-          <a
-            href="https://www.google.com/maps/place/Vinterior+India/data=!4m2!3m1!1s0x3be7cf993e0dd7b9:0x2ff98ec0d1470be"
-            target="_blank"
-            rel="noreferrer"
-            className="btn-ghost"
-          >
-            Read on Google
-          </a>
-        </div>
       </div>
+
+      <div className="mx-auto mt-16 flex max-w-[1400px] flex-col items-center justify-center gap-4 px-6 text-center md:px-12">
+        <p className="text-sm font-light text-muted-foreground">
+          Rated <span className="font-serif text-charcoal">5.0</span> on Google · Reviewed by clients across Mumbai, Delhi, Goa &amp; London
+        </p>
+        <a
+          href="https://www.google.com/maps/place/Vinterior+India/data=!4m2!3m1!1s0x3be7cf993e0dd7b9:0x2ff98ec0d1470be"
+          target="_blank"
+          rel="noreferrer"
+          className="btn-ghost"
+        >
+          Read on Google
+        </a>
+      </div>
+
+      <style>{`
+        @keyframes testimonial-marquee {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
+        }
+      `}</style>
     </section>
   );
 }
