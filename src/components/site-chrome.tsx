@@ -229,18 +229,28 @@ export function SiteFooter() {
               Mumbai, Maharashtra 400008, India
             </address>
             <ul className="mt-4 space-y-1 text-sm text-ivory/85">
-              <li><a href="tel:+919820649649" className="hover:text-gold">+91 98206 49649</a></li>
-              <li><a href="mailto:info@vinteriorstore.in" className="hover:text-gold">info@vinteriorstore.in</a></li>
               <li>
-                <a href="https://wa.me/919664368841" target="_blank" rel="noreferrer" className="hover:text-gold">
-                  WhatsApp
-                </a>
-                <span className="mx-2 text-ivory/30">·</span>
-                <a href="https://www.instagram.com/vinteriorstoreindia/" target="_blank" rel="noreferrer" className="hover:text-gold">
-                  Instagram
+                <a href="tel:+919820649649" className="inline-flex items-center gap-2 hover:text-gold">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.9.35 1.84.59 2.8.72A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  +91 98206 49649
                 </a>
               </li>
+              <li>
+                <a href="https://wa.me/919664368841" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-gold">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.85c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.67a11.9 11.9 0 0 0 5.65 1.44h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.44zM12.06 21.5h-.01a9.65 9.65 0 0 1-4.92-1.35l-.35-.21-3.8.99 1.02-3.7-.23-.38a9.66 9.66 0 0 1-1.48-5.11c0-5.34 4.35-9.68 9.7-9.68 2.59 0 5.02 1.01 6.85 2.84a9.63 9.63 0 0 1 2.84 6.85c0 5.34-4.35 9.75-9.62 9.75zm5.55-7.27c-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.5-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.68-1.64-.93-2.24-.25-.6-.5-.52-.68-.53l-.58-.01c-.2 0-.53.07-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.92 1.23 3.12.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.79-.73 2.04-1.44.25-.71.25-1.31.18-1.44-.07-.13-.27-.2-.57-.35z" />
+                  </svg>
+                  +91 96643 68841
+                </a>
+              </li>
+              <li><a href="mailto:info@vinteriorstore.in" className="hover:text-gold">info@vinteriorstore.in</a></li>
+              <li>
+                <a href="https://www.instagram.com/vinteriorstoreindia/" target="_blank" rel="noreferrer" className="hover:text-gold">Instagram</a>
+              </li>
             </ul>
+
           </div>
         </div>
         <div className="mt-8 flex flex-col items-start justify-between gap-3 text-[11px] uppercase tracking-[0.2em] text-ivory/45 md:flex-row md:items-center">
