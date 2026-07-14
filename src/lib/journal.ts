@@ -11,6 +11,189 @@ export interface JournalPost {
 
 export const journalPosts: JournalPost[] = [
   {
+    slug: "art-deco-furniture-india-guide",
+    title: "Art Deco Furniture in India — A Buyer's Guide",
+    description:
+      "How to identify, buy and live with Art Deco furniture in India — from Bombay's 1930s cinemas and mansions to today's collectors of period pieces.",
+    excerpt:
+      "How to identify, buy and live with genuine Art Deco furniture in India — a period Bombay embraced like no other city in the world.",
+    date: "2026-02-05",
+    readMinutes: 6,
+    keywords: [
+      "Art Deco furniture India",
+      "Art Deco furniture Mumbai",
+      "Bombay Art Deco",
+      "vintage Art Deco furniture",
+      "Art Deco sideboard",
+      "Art Deco dressing table",
+    ],
+    body: [
+      {
+        p: "Mumbai holds the second-largest collection of Art Deco buildings in the world, after Miami. Between 1930 and 1950 the city's cinemas, apartment blocks and merchant homes were furnished in the same language — streamlined case pieces in Burma teak, curved club chairs, mirrored dressing tables, chrome-and-glass drinks trolleys, and bakelite hardware. Almost a century later, those pieces are quietly returning to the market as older buildings are sold and cleared.",
+      },
+      {
+        h: "How to spot genuine Art Deco",
+        p: "Real Deco is streamlined but heavy. Look for stepped or curved edges, veneered surfaces (walnut, teak, rosewood) laid in geometric patterns, chrome or bakelite handles, and interiors lined in birch ply. Legs are short and often plinth-based, not turned. The whole piece feels grounded — Deco distrusted the delicate leg.",
+      },
+      {
+        h: "What Bombay did differently",
+        p: "Bombay Deco used Burma teak instead of European walnut, added carved detail where Paris and New York would have left surfaces plain, and often married Deco form with Anglo-Indian joinery. A Bombay Deco sideboard is instantly recognisable — heavier, warmer in colour, and built to survive the climate.",
+      },
+      {
+        h: "What to look for now",
+        p: "Sideboards, bar cabinets, dressing tables with tri-fold mirrors, tub chairs and low daybeds are the most collected categories. Original veneer, original hardware and original mirror are all worth paying more for; replaced mirror is common and acceptable, replaced hardware is a discount. Ask, always.",
+      },
+    ],
+  },
+  {
+    slug: "antique-chandeliers-mumbai-guide",
+    title: "Antique Chandeliers in Mumbai — What Collectors Should Know",
+    description:
+      "A guide to buying antique crystal chandeliers in Mumbai — Bohemian, Venetian, French bronze — plus what to check before you install one at home.",
+    excerpt:
+      "Bohemian crystal, Venetian glass, French bronze — a guide to the antique chandeliers you'll actually find in Mumbai, and what to check before you buy.",
+    date: "2026-03-02",
+    readMinutes: 5,
+    keywords: [
+      "antique chandeliers Mumbai",
+      "buy antique chandelier India",
+      "Bohemian crystal chandelier",
+      "Venetian glass chandelier",
+      "vintage chandeliers Mumbai",
+    ],
+    body: [
+      {
+        p: "Antique chandeliers are among the most rewarding — and most misunderstood — pieces a first-time collector will buy. The market in Mumbai carries three families of chandelier in real quantity: Bohemian (Czech) crystal from the late 19th century, Venetian (Murano) glass from the 1920s onward, and French gilt-bronze frames with cut-crystal drops. Each looks different, ages differently, and is priced very differently.",
+      },
+      {
+        h: "Bohemian crystal",
+        p: "Cut lead crystal on a brass or bronze frame. Heavy, precisely faceted, and — in a good example — refracts light into full spectrum colour across a room. Original Bohemian crystal has tiny inclusions and slight irregularities in the cuts; modern reproductions are too perfect.",
+      },
+      {
+        h: "Venetian (Murano) glass",
+        p: "Blown glass in floral, leaf or ribbon forms, usually in clear, gold-flecked or pastel colours. Lighter than crystal. Look for hand-blown irregularities, small bubbles in the glass, and a wrought-iron or gilded metal armature. Replaced arms are common — check that colour and style match across the piece.",
+      },
+      {
+        h: "Before you install",
+        p: "Antique chandeliers are heavy — some over 40 kilograms. Confirm your ceiling can carry the load with an anchor rated for it. Ask the dealer to rewire the piece to Indian standards before delivery; original cloth-covered wiring is charming and dangerous. Vinterior rewires every chandelier before it leaves the gallery.",
+      },
+    ],
+  },
+  {
+    slug: "care-and-maintenance-antique-furniture-india",
+    title: "How to Care for Antique Furniture in Indian Weather",
+    description:
+      "Practical advice on caring for antique wood, veneer and upholstery in Indian humidity — from a Mumbai gallery that has restored antiques for three generations.",
+    excerpt:
+      "Humidity, monsoon, direct sun and air-conditioning — how to keep an antique alive in an Indian home, from the people who restore them.",
+    date: "2026-04-10",
+    readMinutes: 5,
+    keywords: [
+      "antique furniture care India",
+      "how to clean antique furniture",
+      "antique wood maintenance India",
+      "antique furniture humidity",
+      "antique restoration Mumbai",
+    ],
+    body: [
+      {
+        p: "An antique that has survived a hundred and fifty years usually fails, when it fails, in the first two years of a new home. Indian weather is the reason. Monsoon humidity swells joints; air-conditioning shrinks them again in winter; direct afternoon sun bleaches veneer. Three small habits keep almost any piece safe.",
+      },
+      {
+        h: "Keep humidity stable, not low",
+        p: "Wood cracks when humidity swings, not when it is high. A room that stays between 45% and 60% relative humidity year-round is ideal. A cheap hygrometer costs less than a lunch and will tell you more about what your antique needs than any product ever will.",
+      },
+      {
+        h: "Never place in direct sun",
+        p: "Ultraviolet light bleaches surface finish, warps veneer and dries out timber. Sheer curtains during peak hours are enough. If you must place a piece near a window, rotate it a quarter-turn every few months so the sun does not fade one side.",
+      },
+      {
+        h: "Wax, don't polish",
+        p: "A good beeswax cream, applied twice a year with a soft cloth, feeds antique wood and preserves patina. Modern spray polishes contain silicones that build up into a plastic film and are almost impossible to remove. If a piece needs more than a wax, ask a restorer — do not experiment.",
+      },
+      {
+        h: "When to call a restorer",
+        p: "Loose joints, lifting veneer, active woodworm (small piles of fine dust under the piece), and cracked mirror silvering all need professional attention. Left alone, small problems become big ones. Vinterior maintains every piece it has ever sold — bring it back if in doubt.",
+      },
+    ],
+  },
+  {
+    slug: "vintage-vs-antique-vs-reproduction",
+    title: "Vintage, Antique, Reproduction — What's the Difference?",
+    description:
+      "A plain-English guide to the difference between vintage, antique and reproduction furniture, and what it means for price, quality and long-term value.",
+    excerpt:
+      "Three words often used loosely and priced very differently. A plain guide to what vintage, antique and reproduction actually mean.",
+    date: "2026-05-08",
+    readMinutes: 4,
+    keywords: [
+      "antique vs vintage furniture",
+      "reproduction antique furniture",
+      "what is antique furniture",
+      "vintage furniture India",
+      "antique furniture value",
+    ],
+    body: [
+      {
+        p: "Three words the trade uses every day, often interchangeably, and priced very differently. Here is the short version — the one a good dealer would give you if you asked them across a table.",
+      },
+      {
+        h: "Antique",
+        p: "Traditionally, at least 100 years old. In practice, most serious dealers keep to that line. An antique piece was made by hand, in materials that are no longer standard, using joinery that machines cannot cheaply replicate. It carries provenance, patina and — if kept well — appreciates over time.",
+      },
+      {
+        h: "Vintage",
+        p: "Roughly 25 to 100 years old. Vintage covers Art Deco, mid-century modern, industrial pieces and 1970s design. Vintage is often part-machine-made, uses materials that are still available, and appeals for its style rather than its age. It does not always appreciate — but the best pieces do.",
+      },
+      {
+        h: "Reproduction",
+        p: "New furniture built to look old. There is nothing wrong with a well-made reproduction sold as a reproduction. There is a great deal wrong with one sold as an antique. Reproductions do not appreciate; they depreciate like any new furniture. If a piece is described as 'antique-style' or 'in the manner of' — it is a reproduction.",
+      },
+      {
+        h: "How to tell the difference",
+        p: "Turn the piece over. Look for hand-cut dovetails, hand-planed backs, oxidised hardware and irregular tool marks. Ask for a written note of age and provenance. Any dealer worth buying from will provide one, and stand behind it.",
+      },
+    ],
+  },
+  {
+    slug: "designing-interiors-antique-furniture",
+    title: "Designing Interiors Around Antique Furniture",
+    description:
+      "How designers and homeowners are mixing antique furniture with contemporary interiors — a Mumbai gallery on scale, contrast and the one-piece rule.",
+    excerpt:
+      "Scale, contrast, restraint — how the best interiors let a single antique do the work of an entire room.",
+    date: "2026-06-04",
+    readMinutes: 5,
+    keywords: [
+      "antique furniture in modern interiors",
+      "mixing antique and modern furniture",
+      "interior design antique furniture",
+      "period furniture interiors India",
+      "heritage home interior design",
+    ],
+    body: [
+      {
+        p: "The best rooms almost never look decorated. They look considered — as though someone thought carefully about one or two pieces and let the rest fall into place. Antique furniture is unusually good at this, if used with restraint.",
+      },
+      {
+        h: "The one-piece rule",
+        p: "Every room can carry one strong antique — a vitrine, a carved centre table, a Deco sideboard, an oversized mirror. Two competes; three crowds. Choose one and let it anchor the space. Everything else in the room should defer to it in scale, colour and finish.",
+      },
+      {
+        h: "Contrast, not match",
+        p: "Antique wood next to raw linen, unpolished stone, matte plaster or brushed steel reads as intentional. Antique wood next to more antique wood reads as inherited — which is fine, if that is the story, and dated if it isn't. Interior designers working with antiques almost always contrast the century against the surface.",
+      },
+      {
+        h: "Lighting is half the piece",
+        p: "A great antique in poor light disappears. A good antique in careful light — a picture light above, a warm 2700K bulb inside a cabinet — becomes the centre of the room. Spend on the light after you spend on the piece, not before.",
+      },
+      {
+        h: "Live with it, don't display it",
+        p: "The homes where antiques feel most at home are the ones that use them. A campaign chest that holds linens, a bureau that carries the day's post, a chandelier lit every evening. Museums display; homes should use.",
+      },
+    ],
+  },
+  {
     slug: "buying-antique-furniture-mumbai",
     title: "Buying Antique Furniture in Mumbai — A Collector's Guide",
     description:

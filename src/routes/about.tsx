@@ -196,7 +196,7 @@ function AboutPage() {
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <Link to="/collections" className="btn-primary">View Collections</Link>
-            <a href="https://wa.me/919820649649?text=I%20would%20like%20to%20visit%20Vinterior." target="_blank" rel="noreferrer" className="btn-ghost">
+            <a href="https://wa.me/919664368841?text=I%20would%20like%20to%20visit%20Vinterior." target="_blank" rel="noreferrer" className="btn-ghost">
               Plan Your Visit
             </a>
           </div>
@@ -221,14 +221,14 @@ function AboutPage() {
             <div className="mt-10 space-y-2 text-sm text-charcoal/80">
               <p><a href="tel:+919820649649" className="link-underline">+91 98206 49649</a></p>
               <p>
-                <a href="https://wa.me/919820649649" target="_blank" rel="noreferrer" className="link-underline">WhatsApp</a>
+                <a href="https://wa.me/919664368841" target="_blank" rel="noreferrer" className="link-underline">WhatsApp</a>
                 <span className="mx-3 text-charcoal/30">·</span>
                 <a href="https://www.instagram.com/vinteriorstoreindia/" target="_blank" rel="noreferrer" className="link-underline">Instagram</a>
               </p>
             </div>
             <div className="mt-10">
               <a
-                href="https://wa.me/919820649649?text=I%20would%20like%20to%20plan%20a%20visit%20to%20Vinterior."
+                href="https://wa.me/919664368841?text=I%20would%20like%20to%20plan%20a%20visit%20to%20Vinterior."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-primary"
