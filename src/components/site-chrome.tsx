@@ -174,7 +174,7 @@ export function SiteHeader() {
               })}
               <li className="mt-2 border-t border-white/40 pt-3">
                 <a
-                  href="https://wa.me/919820649649"
+                  href="https://wa.me/919664368841"
                   target="_blank"
                   rel="noreferrer"
                   className="block rounded-2xl px-5 py-4 text-[12px] font-medium uppercase tracking-[0.24em] text-charcoal hover:bg-white/40"
@@ -232,7 +232,7 @@ export function SiteFooter() {
               <li><a href="tel:+919820649649" className="hover:text-gold">+91 98206 49649</a></li>
               <li><a href="mailto:info@vinteriorstore.in" className="hover:text-gold">info@vinteriorstore.in</a></li>
               <li>
-                <a href="https://wa.me/919820649649" target="_blank" rel="noreferrer" className="hover:text-gold">
+                <a href="https://wa.me/919664368841" target="_blank" rel="noreferrer" className="hover:text-gold">
                   WhatsApp
                 </a>
                 <span className="mx-2 text-ivory/30">·</span>

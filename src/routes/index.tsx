@@ -409,7 +409,7 @@ function Arrivals() {
 
         <div className="mt-20 grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-3">
           {arrivals.map((p) => (
-            <a key={p.name} href="https://wa.me/919820649649" target="_blank" rel="noreferrer" className="group block">
+            <a key={p.name} href="https://wa.me/919664368841" target="_blank" rel="noreferrer" className="group block">
               <div className="relative aspect-[3/4] overflow-hidden bg-ivory">
                 <img
                   src={p.img}
@@ -518,7 +518,7 @@ function Showroom() {
               Open in Google Maps
             </a>
             <a
-              href="https://wa.me/919820649649?text=I%20would%20like%20to%20schedule%20a%20visit%20to%20Vinterior."
+              href="https://wa.me/919664368841?text=I%20would%20like%20to%20schedule%20a%20visit%20to%20Vinterior."
               target="_blank"
               rel="noreferrer"
               className="btn-ghost-light"
@@ -722,7 +722,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/919820649649"
+                  href="https://wa.me/919664368841"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-gold"

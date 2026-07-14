@@ -149,7 +149,7 @@ function PostPage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <a
-              href="https://wa.me/919820649649?text=I%20would%20like%20to%20visit%20Vinterior."
+              href="https://wa.me/919664368841?text=I%20would%20like%20to%20visit%20Vinterior."
               target="_blank"
               rel="noreferrer"
               className="btn-primary"

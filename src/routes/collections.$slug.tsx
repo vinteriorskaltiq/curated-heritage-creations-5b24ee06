@@ -158,7 +158,7 @@ function CollectionDetail() {
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <a
-              href={`https://wa.me/919820649649?text=${encodeURIComponent(`I would like to enquire about ${c.title} at Vinterior.`)}`}
+              href={`https://wa.me/919664368841?text=${encodeURIComponent(`I would like to enquire about ${c.title} at Vinterior.`)}`}
               target="_blank"
               rel="noreferrer"
               className="btn-primary"
