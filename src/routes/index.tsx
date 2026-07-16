@@ -441,28 +441,102 @@ function Arrivals() {
 }
 
 
+const pillarIcons = [
+  // Provenance — scroll/document
+  <svg key="prov" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>,
+  // Curated — eye / magnifier
+  <svg key="cur" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>,
+  // Restoration — tools/hammer
+  <svg key="rest" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>,
+  // One-of-one — diamond / gem
+  <svg key="one" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/><polyline points="2 15.5 12 8.5 22 15.5"/><line x1="12" y1="2" x2="12" y2="8.5"/></svg>,
+];
+
 function Pillars() {
   return (
-    <section className="bg-charcoal py-28 text-ivory md:py-40">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-        <div className="max-w-2xl">
-          <p className="eyebrow text-gold">
-            <span className="hairline mr-3 bg-gold" />
-            The Vinterior Standard
+    <section
+      className="relative overflow-hidden bg-charcoal py-28 text-ivory md:py-40"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 80% 20%, rgba(212,175,55,0.06) 0%, transparent 60%), radial-gradient(circle at 10% 80%, rgba(212,175,55,0.04) 0%, transparent 50%)",
+      }}
+    >
+      {/* Subtle decorative grid */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg, #d4af37 0px, #d4af37 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, #d4af37 0px, #d4af37 1px, transparent 1px, transparent 60px)",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-[1400px] px-6 md:px-12">
+        {/* Header row */}
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-16">
+          <div className="max-w-2xl">
+            <p className="eyebrow text-gold">
+              <span className="hairline mr-3 bg-gold" />
+              The Vinterior Standard
+            </p>
+            <h2 className="mt-6 font-serif text-4xl leading-[1.08] text-ivory md:text-5xl lg:text-[3.4rem]">
+              Why collectors{" "}
+              <em className="italic font-normal text-gold/90">choose us.</em>
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm font-light leading-relaxed text-ivory/50 md:text-right md:pb-2">
+            Four principles that have guided every acquisition, restoration and
+            sale since 1955.
           </p>
-          <h2 className="mt-6 font-serif text-4xl leading-[1.1] text-ivory md:text-5xl lg:text-[3.25rem]">
-            Why collectors <em className="italic font-normal">choose us.</em>
-          </h2>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((p) => (
-            <div key={p.n} className="border-t border-ivory/15 pt-8">
-              <span className="font-serif text-sm italic text-gold">{p.n}</span>
-              <h3 className="mt-8 font-serif text-2xl text-ivory">{p.t}</h3>
-              <p className="mt-5 text-sm font-light leading-relaxed text-ivory/65">
-                {p.d}
-              </p>
+        {/* Divider */}
+        <div className="mt-14 h-px w-full bg-gradient-to-r from-gold/40 via-ivory/10 to-transparent" />
+
+        {/* Cards */}
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {pillars.map((p, i) => (
+            <div
+              key={p.n}
+              className="group relative flex flex-col gap-6 rounded-2xl border border-ivory/10 bg-white/[0.03] p-8 transition-all duration-500 hover:border-gold/40 hover:bg-white/[0.06] hover:shadow-[0_0_40px_-8px_rgba(212,175,55,0.18)]"
+            >
+              {/* Gold number badge */}
+              <span className="absolute right-7 top-7 font-serif text-[10px] italic tracking-widest text-gold/40 group-hover:text-gold/70 transition-colors duration-500">
+                {p.n}
+              </span>
+
+              {/* Icon */}
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-ivory/10 bg-white/[0.04] text-gold/70 group-hover:border-gold/30 group-hover:text-gold transition-all duration-500">
+                {pillarIcons[i]}
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col gap-3">
+                <h3 className="font-serif text-xl leading-snug text-ivory group-hover:text-white transition-colors duration-300">
+                  {p.t}
+                </h3>
+                <p className="text-[13px] font-light leading-relaxed text-ivory/55 group-hover:text-ivory/75 transition-colors duration-300">
+                  {p.d}
+                </p>
+              </div>
+
+              {/* Bottom gold accent bar on hover */}
+              <div className="absolute inset-x-0 bottom-0 h-px rounded-b-2xl bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom decorative stat row */}
+        <div className="mt-20 grid grid-cols-2 gap-8 border-t border-ivory/10 pt-14 md:grid-cols-4">
+          {[
+            { val: "1955", label: "Est. in Mumbai" },
+            { val: "70+", label: "Years of expertise" },
+            { val: "3rd", label: "Generation family" },
+            { val: "1 in 40", label: "Pieces admitted" },
+          ].map((s) => (
+            <div key={s.val} className="flex flex-col gap-1">
+              <span className="font-serif text-3xl text-gold md:text-4xl">{s.val}</span>
+              <span className="text-[11px] uppercase tracking-[0.2em] text-ivory/45">{s.label}</span>
             </div>
           ))}
         </div>
