@@ -81,8 +81,10 @@ export function SiteHeader() {
           >
             {NAV_ITEMS.map((item) => {
               const active = isActive(item);
-              const cls = `relative rounded-full px-5 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-charcoal/80 hover:text-charcoal transition-all duration-300 ease-out hover:bg-white/40 hover:scale-[1.04] ${
-                active ? "text-charcoal bg-white/35" : ""
+              const cls = `relative rounded-full px-5 py-2 text-[11px] font-medium uppercase tracking-[0.22em] transition-all duration-300 ease-out hover:bg-white/40 hover:scale-[1.04] ${
+                scrolled
+                  ? active ? "text-charcoal bg-white/35" : "text-charcoal/80 hover:text-charcoal"
+                  : active ? "text-ivory bg-white/20" : "text-ivory/90 hover:text-ivory"
               }`;
               return item.to ? (
                 <Link key={item.label} to={item.to} className={cls}>
@@ -204,7 +206,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-14 border-b border-ivory/10 pb-14 md:grid-cols-12">
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="Vinterior" className="h-11 w-11 rounded-full object-cover" />
+              <img src={logoAsset} alt="Vinterior" className="h-11 w-11 rounded-full object-cover" />
               <span className="font-serif text-2xl tracking-wide text-ivory">Vinterior</span>
             </div>
             <p className="mt-6 max-w-sm text-sm font-light leading-relaxed text-ivory/60">

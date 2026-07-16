@@ -529,19 +529,19 @@ function Showroom() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-[1400px] px-6 pb-24 md:px-12">
-        <div className="overflow-hidden border border-ivory/15 bg-charcoal/40 shadow-2xl">
-          <iframe
-            title="Vinterior India — Mumbai showroom location on Google Maps"
-            src="https://maps.google.com/maps?q=Vinterior%20India%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="420"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="block w-full grayscale contrast-105"
-            style={{ border: 0 }}
-          />
-        </div>
+      <div className="relative">
+        <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-charcoal to-transparent z-10 pointer-events-none" />
+        <iframe
+          title="Vinterior India — Mumbai showroom location on Google Maps"
+          src="https://maps.google.com/maps?q=Vinterior%20India%20Mumbai&t=&z=17&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="380"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="block w-full opacity-80 grayscale contrast-110 saturate-50"
+          style={{ border: 0, display: "block" }}
+        />
+        <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-charcoal to-transparent z-10 pointer-events-none" />
       </div>
     </section>
   );
