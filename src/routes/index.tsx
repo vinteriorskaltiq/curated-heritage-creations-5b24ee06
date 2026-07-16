@@ -5,13 +5,13 @@ import { SiteHeader } from "@/components/site-chrome";
 
 import logoAsset from "@/assets/vinterior-logo.png";
 import showroomImg from "@/assets/showroom.jpg";
-import productVitrine from "@/assets/piece-cabinet.jpg";
-import productTable from "@/assets/gallery-3.jpg";
-import productChair from "@/assets/piece-armchair.jpg";
-import showroomVitrines from "@/assets/gallery-1.jpg";
-import showroomSeating from "@/assets/gallery-2.jpg";
-import showroomMirror from "@/assets/piece-mirror.jpg";
-import showroomCarved from "@/assets/gallery-4.jpg";
+import productVitrine from "@/assets/product-vitrine.png";
+import productTable from "@/assets/product-table.png";
+import productChair from "@/assets/product-chair.png";
+import showroomVitrines from "@/assets/showroom-vitrines.jpg";
+import showroomSeating from "@/assets/showroom-seating.jpg";
+import showroomMirror from "@/assets/showroom-mirror-scale.jpg";
+import showroomCarved from "@/assets/showroom-carved-corner.jpg";
 
 const pageTitle =
   "Vinterior — Antique Furniture Gallery in Mumbai | Heritage Décor";
