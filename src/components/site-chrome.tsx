@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/vinterior-logo.asset.json";
+import logoAsset from "@/assets/vinterior-logo.png";
 
 type NavItem = { label: string; to?: string; href?: string };
 
@@ -55,7 +55,7 @@ export function SiteHeader() {
           {/* Left: logo + wordmark, outside the glass */}
           <Link to="/" className="pointer-events-auto flex items-center gap-3 group">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="Vinterior"
               width={44}
               height={44}

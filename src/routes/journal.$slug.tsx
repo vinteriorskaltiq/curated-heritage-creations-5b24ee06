@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getPost, journalPosts } from "@/lib/journal";
-import logoAsset from "@/assets/vinterior-logo.asset.json";
+import logoAsset from "@/assets/vinterior-logo.png";
 
 export const Route = createFileRoute("/journal/$slug")({
   loader: ({ params }) => {
@@ -79,7 +79,7 @@ function PostPage() {
       <header className="border-b border-charcoal/10 bg-warm-white">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 md:px-12">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Vinterior" className="h-10 w-10 rounded-full object-cover" />
+            <img src={logoAsset} alt="Vinterior" className="h-10 w-10 rounded-full object-cover" />
             <span className="font-serif text-xl tracking-wide">Vinterior</span>
           </Link>
           <Link to="/journal" className="text-[10px] font-medium uppercase tracking-[0.24em] text-charcoal/70 hover:text-charcoal">

@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/site-chrome";
 
 
-import logoAsset from "@/assets/vinterior-logo.asset.json";
+import logoAsset from "@/assets/vinterior-logo.png";
 import showroomImg from "@/assets/showroom.jpg";
-import productVitrine from "@/assets/product-vitrine.asset.json";
-import productTable from "@/assets/product-table.asset.json";
-import productChair from "@/assets/product-chair.asset.json";
-import showroomVitrines from "@/assets/showroom-vitrines.asset.json";
-import showroomSeating from "@/assets/showroom-seating.asset.json";
-import showroomMirror from "@/assets/showroom-mirror-scale.asset.json";
-import showroomCarved from "@/assets/showroom-carved-corner.asset.json";
+import productVitrine from "@/assets/piece-cabinet.jpg";
+import productTable from "@/assets/gallery-3.jpg";
+import productChair from "@/assets/piece-armchair.jpg";
+import showroomVitrines from "@/assets/gallery-1.jpg";
+import showroomSeating from "@/assets/gallery-2.jpg";
+import showroomMirror from "@/assets/piece-mirror.jpg";
+import showroomCarved from "@/assets/gallery-4.jpg";
 
 const pageTitle =
   "Vinterior — Antique Furniture Gallery in Mumbai | Heritage Décor";
@@ -104,42 +104,42 @@ export const Route = createFileRoute("/")({
 
 const arrivals = [
   {
-    img: productVitrine.url,
+    img: productVitrine,
     name: "Louis XV Marquetry Vitrine",
     category: "Antique Cabinets · France, 19th Century",
     price: "On Request",
     fit: "contain" as const,
   },
   {
-    img: productTable.url,
+    img: productTable,
     name: "Anglo-Indian Carved Centre Table",
     category: "Heritage Furniture · Bombay, c. 1880",
     price: "On Request",
     fit: "contain" as const,
   },
   {
-    img: productChair.url,
+    img: productChair,
     name: "Burmese Rosewood Chair & Stool",
     category: "Carved Seating · Burma, 19th Century",
     price: "On Request",
     fit: "contain" as const,
   },
   {
-    img: showroomCarved.url,
+    img: showroomCarved,
     name: "Carved Rosewood Corner Cabinet",
     category: "Anglo-Indian · Late 19th Century",
     price: "On Request",
     fit: "cover" as const,
   },
   {
-    img: showroomMirror.url,
+    img: showroomMirror,
     name: "Cast-Iron Weighing Scale & Dressing Mirror",
     category: "Industrial & Boudoir · Early 20th Century",
     price: "On Request",
     fit: "cover" as const,
   },
   {
-    img: showroomVitrines.url,
+    img: showroomVitrines,
     name: "European Vitrine Ensemble",
     category: "Cabinets & Display · 19th Century",
     price: "On Request",
@@ -276,10 +276,10 @@ function JournalPreview() {
 
 
 const heroSlides = [
-  { src: showroomVitrines.url, alt: "Vinterior gallery — European vitrines and antique cabinets in the Mumbai showroom" },
-  { src: showroomSeating.url, alt: "Vinterior showroom — carved seating, Anglo-Indian chairs and vitrines" },
-  { src: showroomMirror.url, alt: "Vinterior gallery — antique dressing mirror, vintage weighing scale and heritage cabinet" },
-  { src: showroomCarved.url, alt: "Vinterior showroom — carved cabinets, colonial chairs and heritage collectibles" },
+  { src: showroomVitrines, alt: "Vinterior gallery — European vitrines and antique cabinets in the Mumbai showroom" },
+  { src: showroomSeating, alt: "Vinterior showroom — carved seating, Anglo-Indian chairs and vitrines" },
+  { src: showroomMirror, alt: "Vinterior gallery — antique dressing mirror, vintage weighing scale and heritage cabinet" },
+  { src: showroomCarved, alt: "Vinterior showroom — carved cabinets, colonial chairs and heritage collectibles" },
 ];
 
 function Hero() {
@@ -703,7 +703,7 @@ function Footer() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src={logoAsset}
                 alt="Vinterior"
                 width={48}
                 height={48}
