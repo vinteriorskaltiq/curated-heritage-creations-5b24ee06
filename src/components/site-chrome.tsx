@@ -17,6 +17,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { location } = useRouterState();
   const pathname = location.pathname;
+  const isCollectionsPage = pathname === "/collections";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
