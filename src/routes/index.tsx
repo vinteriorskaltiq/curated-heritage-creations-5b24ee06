@@ -667,9 +667,9 @@ function Testimonials() {
     },
     {
       quote:
-        "Shipped a French vitrine and a pair of colonial chairs to London — crated beautifully, arrived without a scratch. Communication throughout was gentle and precise. A rare experience in this trade.",
-      city: "London",
-      initials: "LN",
+        "Shipped a French vitrine and a pair of colonial chairs to Hyderabad — crated beautifully, arrived without a scratch. Communication throughout was gentle and precise. A rare experience in this trade.",
+      city: "Hyderabad",
+      initials: "HY",
       rating: 5,
     },
     {
