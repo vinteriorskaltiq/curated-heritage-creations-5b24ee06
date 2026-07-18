@@ -3,7 +3,7 @@ import type {} from "@tanstack/react-start";
 import { journalPosts } from "@/lib/journal";
 import { collections } from "@/lib/collections";
 
-const BASE_URL = "";
+const BASE_URL = "https://www.vinteriorstore.in";
 
 interface SitemapEntry {
   path: string;
