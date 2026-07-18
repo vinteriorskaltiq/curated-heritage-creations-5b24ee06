@@ -745,7 +745,7 @@ function Testimonials() {
 
       <div className="mx-auto mt-16 flex max-w-[1400px] flex-col items-center justify-center gap-4 px-6 text-center md:px-12">
         <p className="text-sm font-light text-muted-foreground">
-          Rated <span className="font-serif text-charcoal">5.0</span> on Google · Reviewed by clients across Mumbai, Delhi, Goa &amp; London
+          Rated <span className="font-serif text-charcoal">5.0</span> on Google · Trusted by collectors, designers, and homeowners across India 
         </p>
         <a
           href="https://www.google.com/maps/place/Vinterior+India/data=!4m2!3m1!1s0x3be7cf993e0dd7b9:0x2ff98ec0d1470be"
