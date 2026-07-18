@@ -66,7 +66,7 @@ export function SiteHeader() {
             />
             <span
               className={`hidden font-serif text-xl tracking-wide sm:block transition-colors duration-500 ${
-                scrolled
+                (scrolled || isCollectionsPage)
                   ? "text-charcoal"
                   : "text-ivory [text-shadow:0_1px_14px_rgba(0,0,0,0.55),0_1px_2px_rgba(0,0,0,0.35)]"
               }`}
@@ -83,7 +83,7 @@ export function SiteHeader() {
             {NAV_ITEMS.map((item) => {
               const active = isActive(item);
               const cls = `relative rounded-full px-5 py-2 text-[11px] font-medium uppercase tracking-[0.22em] transition-all duration-300 ease-out hover:bg-white/40 hover:scale-[1.04] ${
-                scrolled
+                (scrolled || isCollectionsPage)
                   ? active ? "text-charcoal bg-white/35" : "text-charcoal/80 hover:text-charcoal"
                   : active ? "text-ivory bg-white/20" : "text-ivory/90 hover:text-ivory"
               }`;
