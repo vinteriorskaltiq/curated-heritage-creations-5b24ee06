@@ -63,9 +63,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const siteTitle = "Vinterior — Luxury Antique Furniture & Heritage Décor, Mumbai";
+const siteTitle =
+  "Vinterior Store | Luxury Antique Furniture, Vintage Furniture & Heritage Décor | Mumbai";
 const siteDescription =
-  "Vinterior curates museum-worthy antique furniture, vintage collectibles and heritage décor from a private Mumbai gallery — sourced for discerning collectors, designers and connoisseurs.";
+  "Discover authentic antique furniture, vintage furniture, heritage décor and rare collectibles at Vinterior Store, a third-generation family gallery in Mumbai established in 1955.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -94,29 +95,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          name: "Vinterior Furniture's",
-          image: "https://www.vinteriorstore.in/og.jpg",
-          "@id": "https://www.vinteriorstore.in",
-          url: "https://www.vinteriorstore.in",
-          telephone: "+91-98206-49649",
-          priceRange: "$$$$",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "G-74 / G-75 / G-76, An Nasr (Sector 4), Mutton Street",
-            addressLocality: "Mumbai",
-            postalCode: "400008",
-            addressCountry: "IN",
-          },
-          sameAs: ["https://www.instagram.com/vinteriorstoreindia/"],
-        }),
+   scripts: [
+  {
+    type: "application/ld+json",
+    children: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Vinterior Furniture's",
+      image: "https://www.vinteriorstore.in/og.jpg",
+      "@id": "https://www.vinteriorstore.in",
+      url: "https://www.vinteriorstore.in",
+      telephone: "+91-98206-49649",
+      priceRange: "$$$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "G-74 / G-75 / G-76, An Nasr (Sector 4), Mutton Street",
+        addressLocality: "Mumbai",
+        postalCode: "400008",
+        addressCountry: "IN",
       },
-    ],
+      sameAs: ["https://www.instagram.com/vinteriorstoreindia/"],
+    }),
+  },
+],
   }),
   shellComponent: RootShell,
   component: RootComponent,
